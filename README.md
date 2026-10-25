@@ -19,6 +19,23 @@ git clone --branch source https://github.com/chonnaweepro/egrappler-bootstrap-ad
 
 ไม่มีขั้นตอน build หรือ package manager ที่กำหนดไว้ในโปรเจกต์นี้ Bootstrap และไฟล์ประกอบหลักอยู่ใน `assets/vendor/`.
 
+## Plugins และไลบรารีที่ใช้งาน
+
+เวอร์ชันต่อไปนี้อ่านจาก header/metadata ในไฟล์ที่เก็บไว้ หากไฟล์ไม่ได้ระบุเวอร์ชัน จะระบุว่า **ไม่ระบุในไฟล์** แทนการคาดเดา
+
+| Plugin/Library | เวอร์ชันในไฟล์ | การใช้งาน | ไฟล์ |
+| --- | --- | --- | --- |
+| jQuery | 1.7.2 | JavaScript base dependency ของส่วนติดต่อและ plugins | `assets/vendor/jquery-1.7.2.min.js` |
+| Bootstrap JavaScript plugins | 2.0.2 | Transition, Alert, Button, Carousel, Collapse, Dropdown, Modal, Tooltip, Popover, Scrollspy, Tab และ Typeahead | `assets/vendor/bootstrap.js` |
+| Bootstrap CSS | ไม่ระบุในไฟล์ | layout และ responsive styles ของ Bootstrap | `assets/vendor/bootstrap.min.css`, `assets/vendor/bootstrap-responsive.min.css` |
+| Chart.js | ไม่ระบุในไฟล์ | วาดกราฟใน Dashboard, Reports และ Charts | `assets/vendor/chart.min.js` |
+| FullCalendar | 1.5.4 | ปฏิทินบน Dashboard | `assets/vendor/fullcalendar.min.js` |
+| Guidely | ไม่ระบุในไฟล์ | guided tour ในหน้า App Tour | `assets/js/guidely.min.js` |
+| FAQ jQuery plugin (โค้ดในโปรเจกต์) | ไม่ระบุ release version | ค้นหาและนำทางในหน้า FAQ | `assets/js/faq.js` |
+| Font Awesome | 3.2.1 | ชุดไอคอนของ template | `assets/vendor/font-awesome.css` |
+| HTML5 Shiv | 3.7.3 | รองรับ HTML5 elements ใน Internet Explorer รุ่นเก่า | `assets/vendor/html5shiv.min.js` |
+| ExplorerCanvas (`excanvas`) | ไม่ระบุในไฟล์ | canvas fallback สำหรับ Internet Explorer รุ่นเก่าในหน้ากราฟ | `assets/vendor/excanvas.min.js` |
+
 ## หน้าต่าง ๆ
 
 | ไฟล์ | หน้าที่ |

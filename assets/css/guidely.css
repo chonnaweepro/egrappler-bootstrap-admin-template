@@ -2,16 +2,22 @@
   background: url("../img/guidely-number.png") no-repeat 0 0;
   width: 45px;
   height: 45px;
-  display: none;
+  display: flex;
   position: absolute;
   cursor: pointer;
   z-index: 10002;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  padding: 0;
+  color: #fff;
+  font: bold 20px/1 Arial, 'Noto Sans Thai UI', sans-serif;
 }
 
 .guidely-number span {
   width: 43px;
   height: 43px;
-  font-family: arial, sans-serif;
+  font-family: arial, 'Noto Sans Thai UI', sans-serif;
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -22,9 +28,11 @@
 }
 
 .guidely-guide {
+  box-sizing: content-box;
   background: #fff;
   width: 300px;
-  display: none;
+  max-width: calc(100vw - 36px);
+  position: absolute;
   border: 3px solid #999;
 
   -webkit-border-radius: 5px;
@@ -39,7 +47,7 @@
 }
 
 .guidely-guide h4 {
-  font-family: Helvetica, arial, sans-serif;
+  font-family: Helvetica, arial, 'Noto Sans Thai UI', sans-serif;
   font-size: 15px;
   font-weight: bold;
   color: #333;
@@ -86,6 +94,7 @@
 
 .guidely-controls button {
   font-size: 11px;
+  line-height: 18px;
   padding: 3px 8px;
   *padding: 1px 4px;
   cursor: pointer;
@@ -125,7 +134,7 @@
 }
 
 .guidely-close-trigger {
-  font-family: Helvetica, arial, sans-serif;
+  font-family: Helvetica, arial, 'Noto Sans Thai UI', sans-serif;
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
@@ -133,10 +142,28 @@
   position: absolute;
   right: 16px;
   top: 12px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 1;
 }
 
 #guide-welcome {
   width: 350px;
+  max-width: calc(100vw - 36px);
+}
+
+.guidely-guide[hidden],
+.guidely-number[hidden],
+.guidely-overlay[hidden] {
+  display: none !important;
+}
+
+.guidely-welcome {
+  top: 75px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 #guide-welcome .guidely-guide-pad {

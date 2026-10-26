@@ -6,7 +6,7 @@ Bootstrap Admin Template by EGrappler.com
 
 
 /** Base Body Styles **/
-body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em 'Open Sans';}
+body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em 'Open Sans', 'Noto Sans Thai UI', sans-serif;}
 
 
 .account-container {
@@ -42,7 +42,11 @@ body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em 'Open
 }
 
 .login-fields input {
-	font-family: 'Open Sans';
+	font-family: 'Open Sans', 'Noto Sans Thai UI', sans-serif;
+	box-sizing: content-box;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	line-height: 18px;
 	font-size: 13px;
 	color: #8e8d8d;
 	padding: 11px 15px 10px 50px;
@@ -244,4 +248,17 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 		padding-left: 6px;
 	}
 	
+}
+
+/* Keep field labels available to assistive technology without changing the original layout. */
+.account-container .login-fields label {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }

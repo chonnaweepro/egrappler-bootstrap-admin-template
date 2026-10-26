@@ -14,8 +14,36 @@ Bootstrap Admin Template by EGrappler.com
 
 .stats-box {
 	margin:40px 0px;
-	color:#dff0d8;
+	color:#527a3b;
 }
+
+/* Keep the report grid and chart heights from the original fluid layout. */
+.stats-box.row {
+	display: grid;
+	grid-template-columns: repeat(3, minmax(0, 1fr));
+	column-gap: 2.5641%;
+	margin-right: 0;
+	margin-left: 0;
+}
+.stats-box.row > .col-md-4 {
+	width: auto;
+	max-width: none;
+	padding-right: 0;
+	padding-left: 0;
+}
+.stats-box-all-info i {
+	line-height: 1.02;
+}
+.stats-box .wrap-chart .chart {
+	height: 193px;
+}
+.main .widget-content {
+	padding-bottom: 21px;
+}
+.main .widget-content > canvas.chart-holder {
+	height: 312px !important;
+}
+
 .stats-box-title {
 	text-align:center;
 	font-weight:bold;
@@ -29,5 +57,5 @@ Bootstrap Admin Template by EGrappler.com
 }
 .stats-box-all-info i{
 	width:60px;
-	height:60px;
+	height:auto;
 }

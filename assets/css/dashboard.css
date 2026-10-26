@@ -27,10 +27,12 @@ Bootstrap Admin Template by EGrappler.com
 }
 
 .shortcuts .shortcut .shortcut-icon {
+	display: inline;
 	margin-top: .25em;
 	margin-bottom: .25em;
 	
 	font-size: 32px;
+	line-height: normal;
 	color: #545454;
 }
 
@@ -120,6 +122,7 @@ Bootstrap Admin Template by EGrappler.com
 	padding-bottom: 1em;
 	margin-bottom: 1em;
 	border-bottom: 1px dotted #CCC;
+	line-height: 18px;
 }
 
 .news-items li:last-child { padding-bottom: 0; border: none; }
@@ -173,16 +176,36 @@ Bootstrap Admin Template by EGrappler.com
 [4. Action Table / .action-table]
 */
 
-.action-table .btn-small {
+.action-table .btn-sm {
 	padding: 4px 5px 5px;
-	
 	font-size: 10px;
+	line-height: 22px;
+}
+
+.action-table .table thead th {
+	border-top: 0;
 }
 
 .action-table .td-actions { 
 	width: 80px; 
+	box-sizing: content-box;
 	
 	text-align: center; 
+}
+
+.messages_layout li {
+	line-height: 18px;
+}
+
+.dashboard-chart .widget-content > canvas.chart-holder {
+	height: 312px;
+	margin-bottom: 6px;
+}
+
+.action-table .table {
+	border-collapse: separate;
+	border-spacing: 0;
+	line-height: 18px;
 }
 
 	.action-table .td-actions .btn { 
@@ -220,7 +243,7 @@ Bootstrap Admin Template by EGrappler.com
 	border-right: 1px solid #CCC;
 	border-left: 1px solid #FFF;
 }
-#big_stats  i { font-size:30px; display:block; line-height: 40px; color:#b2afaa;}
+#big_stats  i { font-size:30px; display:block; margin-inline: auto; line-height: 40px; color:#b2afaa;}
 #big_stats .stat:hover i {color:#19bc9c;}
 
 h6.bigstats{margin: 20px;
@@ -323,4 +346,183 @@ margin-bottom: 26px;}
 	.shortcuts .shortcut {
 		width: 48%;
 	}
+}
+
+/* Match the Bootstrap 2-era FullCalendar header and event styling. */
+#calendar {
+	position: relative;
+	overflow: visible;
+	row-gap: 0;
+	font-size: 13px;
+	line-height: 22.1px;
+}
+
+#calendar > div:first-child {
+	position: relative;
+	display: block;
+	height: 55px;
+	margin: 0;
+	overflow: visible;
+}
+
+#calendar > div:first-child > div:first-child {
+	position: static;
+	display: block;
+	width: 100%;
+	height: 55px;
+}
+
+#calendar > div:first-child > div:nth-child(2) {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	height: 55px;
+	transform: translateX(-50%);
+}
+
+#calendar > div:first-child > div:nth-child(3) {
+	position: absolute;
+	top: -34px;
+	right: 10px;
+}
+
+#calendar [role="table"] {
+	background-color: #f9f9f9 !important;
+	border: 0 !important;
+}
+
+#calendar [role="table"] > div:first-child {
+	height: 36px;
+	min-height: 36px;
+	background-color: #e9ecf1 !important;
+}
+
+#calendar [role="table"] > div:first-child [role="row"] {
+	height: 36px !important;
+	min-height: 36px !important;
+}
+
+#calendar [role="table"] > div:nth-child(2) {
+	height: auto !important;
+	flex: 0 0 auto !important;
+}
+
+#calendar [role="table"] > div:nth-child(2) [role="row"] {
+	flex-basis: 64px !important;
+}
+
+#calendar [role="table"] > div:nth-child(2) [role="row"]:has(.legacy-dashboard-long-event) {
+	flex-basis: 65px !important;
+}
+
+#calendar [role="table"] > div:nth-child(2) [role="row"]:has(.legacy-dashboard-repeating-event) {
+	flex-basis: 73.1px !important;
+}
+
+#calendar [role="table"] > div:nth-child(2) [role="row"]:has(.legacy-dashboard-meeting) {
+	flex-basis: 76.1px !important;
+}
+
+#calendar .legacy-dashboard-day {
+	min-height: 63px !important;
+}
+
+#calendar .legacy-dashboard-day-inner {
+	min-height: 0 !important;
+	flex: 1 1 auto;
+}
+
+#calendar .legacy-dashboard-day-number {
+	margin: 2.5px 4px;
+}
+
+#calendar .btn-group {
+	position: static;
+}
+
+#calendar .btn {
+	box-sizing: border-box;
+	padding: 0 7px;
+	color: #000;
+	font-family: inherit;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24.7px;
+	text-shadow: none;
+	background: transparent;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+#calendar button[aria-label^="Previous"],
+#calendar button[aria-label^="Next"] {
+	position: absolute;
+	top: 6px;
+	width: 30px;
+	height: 44px;
+	padding: 0;
+	color: #000;
+	background: transparent;
+	border: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#calendar button[aria-label^="Previous"] { left: 0; }
+#calendar button[aria-label^="Next"] { right: 1px; }
+#calendar button[aria-label^="Previous"] svg,
+#calendar button[aria-label^="Next"] svg { display: none; }
+#calendar button[aria-label^="Previous"]::before { content: "◄"; }
+#calendar button[aria-label^="Next"]::before { content: "►"; }
+
+#calendar button[aria-label^="This"] {
+	position: absolute;
+	top: 14px;
+	left: 39px;
+	width: 50px;
+	height: 27px;
+	padding: 0;
+	color: #999;
+	line-height: 22.1px;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
+}
+
+#calendar [id$=":title"] {
+	margin: 0;
+	color: #6c737f;
+	font-size: 17.6px;
+	font-weight: 700;
+	line-height: 55px;
+}
+
+#calendar > div:first-child > div:nth-child(3) .btn {
+	height: 27px;
+	padding: 0 7.5px;
+}
+
+#calendar > div:first-child > div:nth-child(3) .btn.active {
+	color: #fff;
+	background: #777;
+	border-color: #777;
+}
+
+#calendar .legacy-dashboard-event {
+	margin: 0 3px 1px;
+	color: #fff;
+	background-color: #5e96ea;
+	border: 0;
+	border-radius: 0;
+}
+
+#calendar .legacy-dashboard-event * {
+	padding-right: 1px;
+	padding-left: 1px;
+	font-size: 11.05px;
+	line-height: 20.1px;
+	white-space: nowrap;
 }

@@ -6,10 +6,7 @@
 
     <title>404 - Bootstrap Admin Template</title>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link
@@ -17,39 +14,27 @@
       rel="stylesheet"
       type="text/css"
     />
-    <link
-      href="./assets/vendor/bootstrap-responsive.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
 
-    <link href="./assets/vendor/font-awesome.css" rel="stylesheet" />
-    <link href="./assets/vendor/google-fonts.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
+        <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
+
+    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+    <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
+      <div class="navbar-inner admin-navbar-inner">
         <div class="container">
-          <a
-            class="btn btn-navbar"
-            data-toggle="collapse"
-            data-target=".nav-collapse"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-          <a class="brand" href="./index.html"> Bootstrap Admin Template </a>
+          <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
 
-          <div class="nav-collapse">
-            <ul class="nav pull-right">
-              <li class="">
-                <a href="./index.html" class="">
-                  <i class="icon-chevron-left"></i>
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li>
+                <a href="./index.html">
+                  <i class="fa-solid fa-chevron-left"></i>
                   Back to Dashboard
                 </a>
               </li>
@@ -65,7 +50,7 @@
 
     <div class="container">
       <div class="row">
-        <div class="span12">
+        <div class="col-md-12">
           <div class="error-container">
             <h1>404</h1>
 
@@ -79,8 +64,8 @@
             <!-- /error-details -->
 
             <div class="error-actions">
-              <a href="./index.html" class="btn btn-large btn-primary">
-                <i class="icon-chevron-left"></i>
+              <a href="./index.html" class="btn btn-lg btn-primary">
+                <i class="fa-solid fa-chevron-left"></i>
                 &nbsp; Back to Dashboard
               </a>
             </div>
@@ -88,13 +73,16 @@
           </div>
           <!-- /error-container -->
         </div>
-        <!-- /span12 -->
+        <!-- /col-md-12 -->
       </div>
       <!-- /row -->
     </div>
     <!-- /container -->
 
-    <script src="./assets/vendor/jquery-1.7.2.min.js"></script>
-    <script src="./assets/vendor/bootstrap.js"></script>
+
+
+
+    <script src="./assets/vendor/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/base.js"></script>
   </body>
 </html>

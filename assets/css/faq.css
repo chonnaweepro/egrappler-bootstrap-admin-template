@@ -13,6 +13,10 @@ Bootstrap Admin Template by EGrappler.com
 
 .faq-search input {
 	width: 96%;
+	box-sizing: content-box;
+	font-size: 13px;
+	line-height: 18px;
+	border: 1px solid #ccc;
 	display: block;
 	padding: 2%;
 }
@@ -21,6 +25,10 @@ Bootstrap Admin Template by EGrappler.com
 
 .faq-empty {
 	display: none;
+}
+
+.faq-empty:not([hidden]) {
+	display: block;
 }
 
 
@@ -46,6 +54,7 @@ Bootstrap Admin Template by EGrappler.com
 }
 
 .faq-toc a {
+	color: #19bc9c;
 	margin-left: .5em;
 }
 
@@ -101,7 +110,7 @@ Bootstrap Admin Template by EGrappler.com
 
 
 .btn-support-ask {
-		display: block; font-size: 22px; padding: 14px 0; font-weight: 600; margin-bottom: .75em;
+		display: block; font-size: 22px; line-height: 22px; padding: 14px 0; font-weight: 600; margin-bottom: .75em;
 	}
 	
 	.btn-support-contact {

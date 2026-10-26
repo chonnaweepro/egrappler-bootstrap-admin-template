@@ -1,0 +1,29 @@
+#jscontrols form {
+  margin-bottom: 18px;
+}
+
+#jscontrols .form-label {
+  display: block;
+  margin-bottom: 5px;
+  line-height: 18px;
+}
+
+#jscontrols .alert {
+  margin-bottom: 18px;
+}
+
+#jscontrols .accordion-button {
+  line-height: 22.1px;
+}
+
+#jscontrols .btn {
+  padding: 2px 12px;
+  line-height: 22px;
+}
+
+#jscontrols .shortcode-actions {
+  margin: 19px 0;
+  padding: 17px 20px 18px;
+  border-top: 1px solid #ddd;
+  background-color: #f5f5f5;
+}

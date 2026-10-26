@@ -1,16 +1,5 @@
-$(function () {
-	
-	
-	$('.subnavbar').find ('li').each (function (i) {
-	
-		var mod = i % 3;
-		
-		if (mod === 2) {
-			$(this).addClass ('subnavbar-open-right');
-		}
-		
-	});
-	
-	
-	
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".subnavbar .mainnav > li").forEach((item, index) => {
+    item.classList.toggle("subnavbar-open-right", index % 3 === 2);
+  });
 });

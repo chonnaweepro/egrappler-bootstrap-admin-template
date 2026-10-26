@@ -6,86 +6,70 @@
 
     <title>Reports - Bootstrap Admin Template</title>
 
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
 
     <link href="./assets/vendor/bootstrap.min.css" rel="stylesheet" />
-    <link
-      href="./assets/vendor/bootstrap-responsive.min.css"
-      rel="stylesheet"
-    />
 
-    <link href="./assets/vendor/google-fonts.css" rel="stylesheet" />
-    <link href="./assets/vendor/font-awesome.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css" rel="stylesheet" />
+    <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
+    <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <link href="./assets/css/reports.css" rel="stylesheet" />
+    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" />
+
+    <link href="./assets/css/reports.css?v=20261026-layout-2" rel="stylesheet" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="./assets/vendor/html5shiv.min.js"></script>
-    <![endif]-->
+
   </head>
 
   <body>
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
+    <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
+      <div class="navbar-inner admin-navbar-inner">
         <div class="container">
-          <a
-            class="btn btn-navbar"
-            data-toggle="collapse"
-            data-target=".nav-collapse"
-          >
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
 
-          <a class="brand" href="./index.html"> Bootstrap Admin Template </a>
+          <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
 
-          <div class="nav-collapse">
-            <ul class="nav pull-right">
-              <li class="dropdown">
+          <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item dropdown">
                 <a
                   href="./reports.html#"
                   class="dropdown-toggle"
-                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown" aria-expanded="false"
                 >
-                  <i class="icon-cog"></i>
+                  <i class="fa-solid fa-gear"></i>
                   Account
-                  <b class="caret"></b>
+
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Settings</a></li>
-                  <li><a href="javascript:;">Help</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Help</a></li>
                 </ul>
               </li>
 
-              <li class="dropdown">
+              <li class="nav-item dropdown">
                 <a
                   href="./reports.html#"
                   class="dropdown-toggle"
-                  data-toggle="dropdown"
+                  data-bs-toggle="dropdown" aria-expanded="false"
                 >
-                  <i class="icon-user"></i>
+                  <i class="fa-solid fa-user-large"></i>
                   EGrappler.com
-                  <b class="caret"></b>
+
                 </a>
 
                 <ul class="dropdown-menu">
-                  <li><a href="javascript:;">Profile</a></li>
-                  <li><a href="javascript:;">Logout</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
+                  <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
                 </ul>
               </li>
             </ul>
 
-            <form class="navbar-search pull-right">
-              <input type="text" class="search-query" placeholder="Search" />
+            <form class="navbar-search float-end" role="search" aria-label="Template search">
+              <input type="search" class="form-control" placeholder="Search" aria-label="Template search" />
             </form>
           </div>
           <!--/.nav-collapse -->
@@ -102,35 +86,35 @@
           <ul class="mainnav">
             <li>
               <a href="./index.html">
-                <i class="icon-dashboard"></i>
+                <i class="fa-solid fa-tachometer-alt-fast"></i>
                 <span>Dashboard</span>
               </a>
             </li>
 
             <li class="active">
               <a href="./reports.html">
-                <i class="icon-list-alt"></i>
+                <i class="fa-solid fa-rectangle-list"></i>
                 <span>Reports</span>
               </a>
             </li>
 
             <li class="subnavbar-open-right">
               <a href="./guidely.html">
-                <i class="icon-facetime-video"></i>
+                <i class="fa-solid fa-video-camera"></i>
                 <span>App Tour</span>
               </a>
             </li>
 
             <li>
               <a href="./charts.html">
-                <i class="icon-bar-chart"></i>
+                <i class="fa-solid fa-chart-bar"></i>
                 <span>Charts</span>
               </a>
             </li>
 
             <li>
               <a href="./shortcodes.html">
-                <i class="icon-code"></i>
+                <i class="fa-solid fa-code"></i>
                 <span>Shortcodes</span>
               </a>
             </li>
@@ -139,31 +123,30 @@
               <a
                 href="javascript:;"
                 class="dropdown-toggle"
-                data-toggle="dropdown"
+                data-bs-toggle="dropdown" aria-expanded="false"
               >
-                <i class="icon-long-arrow-down"></i>
-                <span>Drops</span>
-                <b class="caret"></b>
+                <i class="fa-solid fa-long-arrow-down"></i>
+                <span>Drops </span>
               </a>
 
               <ul class="dropdown-menu">
                 <li>
-                  <a href="./drops.html">Icons</a>
+                  <a class="dropdown-item" href="./drops.html">Icons</a>
                 </li>
                 <li>
-                  <a href="./faq.html">FAQ</a>
+                  <a class="dropdown-item" href="./faq.html">FAQ</a>
                 </li>
                 <li class="subnavbar-open-right">
-                  <a href="./priceing.html">Pricing Plans</a>
+                  <a class="dropdown-item" href="./priceing.html">Pricing Plans</a>
                 </li>
                 <li>
-                  <a href="./login.html">Login</a>
+                  <a class="dropdown-item" href="./login.html">Login</a>
                 </li>
                 <li>
-                  <a href="./signup.html">Signup</a>
+                  <a class="dropdown-item" href="./signup.html">Signup</a>
                 </li>
                 <li class="subnavbar-open-right">
-                  <a href="./error.html">404</a>
+                  <a class="dropdown-item" href="./error.html">404</a>
                 </li>
               </ul>
             </li>
@@ -179,13 +162,13 @@
       <div class="main-inner">
         <div class="container">
           <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
               <div class="info-box">
-                <div class="row-fluid stats-box">
-                  <div class="span4">
+                <div class="row stats-box">
+                  <div class="col-md-4">
                     <div class="stats-box-title">Vizitor</div>
                     <div class="stats-box-all-info">
-                      <i class="icon-user" style="color: #3366cc"></i> 555K
+                      <i class="fa-solid fa-user-large" style="color: #3366cc"></i> 555K
                     </div>
                     <div class="wrap-chart">
                       <div
@@ -204,10 +187,10 @@
                     </div>
                   </div>
 
-                  <div class="span4">
+                  <div class="col-md-4">
                     <div class="stats-box-title">Likes</div>
                     <div class="stats-box-all-info">
-                      <i class="icon-thumbs-up" style="color: #f30"></i> 66.66
+                      <i class="fa-solid fa-thumbs-up" style="color: #f30"></i> 66.66
                     </div>
                     <div class="wrap-chart">
                       <div
@@ -226,10 +209,10 @@
                     </div>
                   </div>
 
-                  <div class="span4">
+                  <div class="col-md-4">
                     <div class="stats-box-title">Orders</div>
                     <div class="stats-box-all-info">
-                      <i class="icon-shopping-cart" style="color: #3c3"></i>
+                      <i class="fa-solid fa-shopping-cart" style="color: #3c3"></i>
                       15.55
                     </div>
                     <div class="wrap-chart">
@@ -256,10 +239,10 @@
           <!-- /row -->
 
           <div class="row">
-            <div class="span6">
+            <div class="col-md-6">
               <div class="widget">
                 <div class="widget-header">
-                  <i class="icon-star"></i>
+                  <i class="fa-solid fa-star"></i>
                   <h3>Some Stats</h3>
                 </div>
                 <!-- /widget-header -->
@@ -277,12 +260,12 @@
               </div>
               <!-- /widget -->
             </div>
-            <!-- /span6 -->
+            <!-- /col-md-6 -->
 
-            <div class="span6">
+            <div class="col-md-6">
               <div class="widget">
                 <div class="widget-header">
-                  <i class="icon-list-alt"></i>
+                  <i class="fa-solid fa-rectangle-list"></i>
                   <h3>Another Chart</h3>
                 </div>
                 <!-- /widget-header -->
@@ -300,7 +283,7 @@
               </div>
               <!-- /widget -->
             </div>
-            <!-- /span6 -->
+            <!-- /col-md-6 -->
           </div>
           <!-- /row -->
         </div>
@@ -314,7 +297,7 @@
       <div class="extra-inner">
         <div class="container">
           <div class="row">
-            <div class="span3">
+            <div class="col-md-3">
               <h4>About Free Admin Template</h4>
               <ul>
                 <li><a href="javascript:;">EGrappler.com</a></li>
@@ -327,8 +310,8 @@
                 <li><a href="javascript:;">Free Resources and Scripts</a></li>
               </ul>
             </div>
-            <!-- /span3 -->
-            <div class="span3">
+            <!-- /col-md-3 -->
+            <div class="col-md-3">
               <h4>Support</h4>
               <ul>
                 <li><a href="javascript:;">Frequently Asked Questions</a></li>
@@ -337,8 +320,8 @@
                 <li><a href="javascript:;">Feedback</a></li>
               </ul>
             </div>
-            <!-- /span3 -->
-            <div class="span3">
+            <!-- /col-md-3 -->
+            <div class="col-md-3">
               <h4>Something Legal</h4>
               <ul>
                 <li><a href="javascript:;">Read License</a></li>
@@ -346,8 +329,8 @@
                 <li><a href="javascript:;">Privacy Policy</a></li>
               </ul>
             </div>
-            <!-- /span3 -->
-            <div class="span3">
+            <!-- /col-md-3 -->
+            <div class="col-md-3">
               <h4>Open Source jQuery Plugins</h4>
               <ul>
                 <li>
@@ -364,7 +347,7 @@
                 </li>
               </ul>
             </div>
-            <!-- /span3 -->
+            <!-- /col-md-3 -->
           </div>
           <!-- /row -->
         </div>
@@ -378,11 +361,11 @@
       <div class="footer-inner">
         <div class="container">
           <div class="row">
-            <div class="span12">
+            <div class="col-md-12">
               © 2013
               <a href="./reports.html#">Bootstrap Responsive Admin Template</a>.
             </div>
-            <!-- /span12 -->
+            <!-- /col-md-12 -->
           </div>
           <!-- /row -->
         </div>
@@ -392,11 +375,17 @@
     </div>
     <!-- /footer -->
 
-    <script src="./assets/vendor/jquery-1.7.2.min.js"></script>
-    <script src="./assets/vendor/excanvas.min.js"></script>
-    <script src="./assets/vendor/chart.min.js" type="text/javascript"></script>
-    <script src="./assets/vendor/bootstrap.js"></script>
+
+
+
+
+
+
+
+    <script src="./assets/vendor/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/base.js"></script>
-    <script src="./assets/js/reports-init.js"></script>
+    <script src="./assets/vendor/chart.umd.min.js"></script>
+    <script src="./assets/js/chart-utils.js?v=20261026-chart-compat-1"></script>
+    <script src="./assets/js/reports-init.js?v=20261026-layout-1"></script>
   </body>
 </html>

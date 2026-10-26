@@ -1,159 +1,76 @@
-/**
- * @name      FAQ Plugin
- * @author    Rod Howard
- * @url       http://goideate.com
- * @date      April 28, 2012
- * @license   GNU/GPL Version 3
- *
- *
- * Example:
- *
- *   $(function() {
- *     $("element, #id, .class").technify({
- *       // #{EDIT-HERE}# Your run-time options go here ...
- *     });
- *   });
- */
-/**
- * Create an anonymous function to avoid library conflicts
- */
-(function($) {
-    /**
-     * Add our plugin to the jQuery.fn object
-     */
-    $.fn.goFaq = function(options) {
-        /**
-         * Define some default settings
-         */
-        var defaults = {
-        	enableSearch: true,
-        	enableToc: true,
-        	enableStyling: true,
-            //numberHtml: '{{#}}.',
-            numberHtml: '<div class="faq-number">{{#}}</div>'
-        };
-        /**
-         * Merge the runtime options with the default settings
-         */
-        var options = $.extend({}, defaults, options);
-        /**
-         * Iterate through the collection of elements and
-         * return the object to preserve method chaining
-         */
-        return this.each(function(i) {
-            /**
-             * Wrap the current element in an instance of jQuery
-             */
-            var $this = $(this);
-            
-            var $container = $this.wrap ('<div class="faq-container"></div>');
-            
-            $this.addClass ('faq-list');
-            
-            if (options.enableSearch) {            	
-	            var $form = generateSearchForm ();
-	            $form.insertBefore ($this);
-            }
-            
-            if (options.enableToc) {
-	            var $toc = generateToc ($this);
-	            $toc.insertBefore ($this);
-	        }
-            			
-            
-            var $empty = generateEmptySearch ();
-            $empty.appendTo ($container);
-            
-            generateAnswerNumbers ($this);
-            
-        });
-        
-        function search (e) {
-			var el, container, filter, count, pattern, container, answers, toc, tocs, empty;
-			
-			el = $(this);
-			container = el.parents ('.faq-container');
-			filter = el.val ();
-			toc = container.find ('.faq-toc');
-			answers = container.find ('.faq-list').find ('li');
-			tocs = container.find ('.faq-toc').find('li');
-			empty = container.find ('.faq-empty');
-			pattern = new RegExp (filter, 'i');
-			
-			answers.hide ();
-			tocs.hide ();
-			
-			$.grep (answers.find ('.faq-text'), function (input) {
-				if (pattern.test ($(input).text ())) {
-					$(input).parents ('li').show ();
-					
-					var index = $(input).parents ('li').index ();				
-					tocs.eq (index).show ();				
-				}			
-			});	
-			
-			if (!answers.is (':visible')) {
-				empty.show ();
-				toc.hide ();
-			} else {
-				empty.hide ();
-				toc.show ();
-			}
-		}
-        
-		
-		function generateEmptySearch () {
-			var $empty = $('<div>', { 'class': 'faq-empty' });
-			
-			return $empty.html ('Nothing Found');
-		}
-        
-        function generateSearchForm () {
-        	
-        	var $form = $('<form>', { 'class': 'faq-search' });
-        	var $input = $('<input>', { 'type': 'text', 'name': 'search', 'placeholder': 'Search by Keyword' });
-        	
-        	$input.appendTo ($form);
-        	
-        	$input.bind ('keyup', search)
-        	
-        	return $form;
-        }
-        
-        function generateAnswerNumbers ($list) {
-        	$list.find ('li').each (function (i) {
-        		var id = parseInt (i+1);
-        		
-        		
-        		$(this).wrapInner ('<div class="faq-text"></div>');
-        		
-        		
-            	if (options.enableStyling) {
-					var icon = '<div class="faq-icon">' + options.numberHtml + '</div>';
-	        		
-					icon = icon.replace ('{{#}}', id);
-					$(this).prepend (icon);
-				}
-        	});
-        }
-        
-        function generateToc ($list) {
-        	var html = '<ol>';	
-        	
-			$list.find ('li').each (function (i) {				
-				var id = parseInt (i+1);							
-				html += '<li>' + id + '. <a href="#faq-' + id + '">' + $(this).find ('h4').text () + '</a></li>';								
-				$(this).attr ('id', 'faq-' + id);				
-			});	
-					
-			html += '</ol>';
-			
-        	var $toc = $('<div>', { 'class': 'faq-toc' });
-        	
-        	$toc.html (html);
-        	
-        	return $toc;
-        	
-        }
-    };
-})(jQuery);
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll(".faq-list").forEach((list) => {
+    const items = Array.from(list.querySelectorAll(":scope > li"));
+    const container = document.createElement("div");
+    container.className = "faq-container";
+    list.before(container);
+    container.append(list);
+
+    const form = document.createElement("form");
+    form.className = "faq-search";
+    form.setAttribute("role", "search");
+    form.addEventListener("submit", (event) => event.preventDefault());
+
+    const input = document.createElement("input");
+    input.type = "text";
+    input.name = "search";
+    input.placeholder = "Search by Keyword";
+    input.setAttribute("aria-label", "Search frequently asked questions");
+
+    form.append(input);
+    list.before(form);
+
+    const toc = document.createElement("nav");
+    toc.className = "faq-toc";
+    toc.setAttribute("aria-label", "Questions on this page");
+    const tocList = document.createElement("ol");
+    toc.append(tocList);
+    list.before(toc);
+
+    const empty = document.createElement("p");
+    empty.className = "faq-empty";
+    empty.textContent = "Nothing Found";
+    empty.hidden = true;
+    container.append(empty);
+
+    const entries = items.map((item, index) => {
+      const id = `faq-${index + 1}`;
+      item.id = id;
+      const text = document.createElement("div");
+      text.className = "faq-text";
+      while (item.firstChild) text.append(item.firstChild);
+      item.append(text);
+
+      const icon = document.createElement("div");
+      icon.className = "faq-icon";
+      const number = document.createElement("div");
+      number.className = "faq-number";
+      number.textContent = String(index + 1);
+      icon.append(number);
+      item.prepend(icon);
+
+      const heading = text.querySelector("h4")?.textContent.trim() || `Question ${index + 1}`;
+      const tocItem = document.createElement("li");
+      const link = document.createElement("a");
+      link.href = `#${id}`;
+      link.textContent = `${index + 1}. ${heading}`;
+      tocItem.append(link);
+      tocList.append(tocItem);
+      return { item, text, tocItem };
+    });
+
+    input.addEventListener("input", () => {
+      const query = input.value.trim().toLocaleLowerCase();
+      let visibleCount = 0;
+      entries.forEach(({ item, text, tocItem }) => {
+        const matches = text.textContent.toLocaleLowerCase().includes(query);
+        item.hidden = !matches;
+        tocItem.hidden = !matches;
+        if (matches) visibleCount += 1;
+      });
+      const hasResults = visibleCount > 0;
+      toc.hidden = !hasResults || !entries.length;
+      empty.hidden = hasResults;
+    });
+  });
+});

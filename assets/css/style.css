@@ -999,7 +999,7 @@ color: #333;
 }
 
 :where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 3px solid rgba(66, 139, 202, .55);
+  outline: 3px solid var(--focus-ring);
   outline-offset: 2px;
 }
 
@@ -1270,6 +1270,8 @@ hr {
   --color-text-muted: #666666;
   --color-text-subtle: #777777;
   --color-focus: rgba(66, 139, 202, .28);
+  --focus-ring: #245580;
+  --focus-ring-inverse: #ffffff;
 
   /* Self-hosted typography (assets/vendor/google-fonts.css -> assets/vendor/fonts).
      Open Sans renders Latin, Noto Sans Thai UI renders Thai; system fonts are
@@ -2120,4 +2122,61 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   .admin-navbar .navbar-brand {
     font-size: 14px;
   }
+}
+
+/* Keyboard focus: one high-contrast ring for every interactive component.
+   Bootstrap's own ring is a 25-50% tint (<3:1) and plain .btn / accordion had none.
+   Dark ring on light surfaces, white ring on the blue header and dark footer. */
+.btn:focus-visible,
+.accordion-button:focus-visible,
+.nav-link:focus-visible,
+.dropdown-item:focus-visible,
+.form-check-input:focus-visible,
+.page-link:focus-visible,
+.navbar-toggler:focus-visible,
+.btn-close:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+
+.btn {
+  --bs-btn-focus-box-shadow: none;
+}
+
+.admin-navbar :focus-visible,
+.extra :focus-visible,
+.footer :focus-visible,
+.skip-link:focus-visible {
+  outline-color: var(--focus-ring-inverse);
+}
+
+.skip-link:focus-visible {
+  outline-color: var(--focus-ring);
+}
+
+.admin-navbar .dropdown-menu :focus-visible {
+  outline-color: var(--focus-ring);
+}
+
+.form-control:focus-visible,
+.form-select:focus-visible {
+  border-color: var(--focus-ring);
+}
+
+/* Calendar events are blue chips: ring them in white, inside the chip. */
+#calendar .legacy-dashboard-event :focus-visible,
+#calendar .legacy-dashboard-event:focus-visible {
+  outline-color: var(--focus-ring-inverse);
+  outline-offset: -3px;
+}
+
+/* Containers with overflow:hidden would clip an outside ring: draw it inside. */
+.accordion-button:focus-visible,
+.table-responsive:focus-visible,
+.dropdown-menu .dropdown-item:focus-visible {
+  outline-offset: -3px;
 }

@@ -356,6 +356,15 @@ Typography rules:
 - **ห้ามลบ variant ที่ template เตรียมไว้ให้ใช้** แม้ไม่มีหน้าใดเรียก เช่น สี `.plan.*`, `.login-social`, `.table-*` variants, `.stats`: ถือเป็น API ของ template
 - ก่อนลบต้องวัดว่า selector ไม่ match ทั้ง 11 หน้า แล้วเทียบภาพ 66 ภาพ + state ที่เปลี่ยนได้ (ปฏิทิน 3 view, dropdown, modal, เมนูมือถือ) ต้อง 0 พิกเซลต่าง
 
+## 12.6 Focus and Motion Standard
+
+- ทุก control ที่ focus ด้วยคีย์บอร์ดต้องมี ring หนา `3px` ที่ contrast `>= 3:1` กับพื้นหลัง (WCAG 1.4.11); วัดจากการกด Tab เดินจริงทุกหน้า: 331 จุดหยุด → 0 จุดที่อ่อนเกินไป
+- Token: `--focus-ring: #245580` (บนพื้นสว่าง), `--focus-ring-inverse: #ffffff` (บน header สีน้ำเงิน, footer, calendar event)
+- ห้ามพึ่ง `box-shadow` ของ Bootstrap เป็น focus indicator (ใช้ tint 25–50% → ~1.4:1) และ `.btn` ธรรมดา/ปุ่ม social/accordion ต้องมี ring ด้วย (Bootstrap ไม่ใส่ให้)
+- Container ที่มี `overflow:hidden` (accordion, scroll region, dropdown item) ใช้ `outline-offset: -3px` เพื่อไม่ให้ ring ถูกตัด
+- `prefers-reduced-motion: reduce` ต้องปิด animation ของ Chart.js (`animation: false`) นอกเหนือจาก CSS transition
+- `outline: 0` ใช้ได้เฉพาะเมื่อมี indicator ทดแทนในสถานะเดียวกัน (`.btn:active` และ `#main-content:focus` ที่เป็นเป้า skip link ไม่ใช่ control)
+
 ## Current Project Tokens
 
 ```css

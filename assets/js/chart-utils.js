@@ -60,6 +60,7 @@
           tooltip: { mode: "index", intersect: false },
         },
         scales: ["doughnut", "pie", "polarArea"].includes(type) ? {} : axis,
+        ...(window.matchMedia("(prefers-reduced-motion: reduce)").matches ? { animation: false } : {}),
         ...options.chartOptions,
       },
     });

@@ -365,6 +365,16 @@ Typography rules:
 - `prefers-reduced-motion: reduce` ต้องปิด animation ของ Chart.js (`animation: false`) นอกเหนือจาก CSS transition
 - `outline: 0` ใช้ได้เฉพาะเมื่อมี indicator ทดแทนในสถานะเดียวกัน (`.btn:active` และ `#main-content:focus` ที่เป็นเป้า skip link ไม่ใช่ control)
 
+## 12.7 Keyboard Interaction Verified (Edge)
+
+ทดสอบด้วย key event จริง (Tab / Shift+Tab / Enter / Space / ArrowDown / Escape) ไม่ใช่การเรียก `.click()`:
+
+- **Modal:** `role=dialog`, `aria-modal=true`, `aria-labelledby` ถูกต้อง; Tab/Shift+Tab วนอยู่ภายใน modal (Close → Cancel → Save → Close); Esc, ปุ่มปิด และคลิก backdrop ปิดได้ และคืน focus ไปที่ปุ่มที่เปิด
+- **Dropdown ทั้ง 20 ตัวใน 11 หน้า:** Enter และ Space เปิด, ArrowDown ย้าย focus เข้าเมนู, Escape ปิดและคืน focus ที่ toggle
+- Toggle ที่เป็น `<a>` ต้องมี `role="button"` ทุกตัว: ตรวจด้วย regex ที่รองรับ `<a` ตามด้วยขึ้นบรรทัดใหม่ (`<a\s`) ไม่ใช่เฉพาะ `<a `
+- ตัวทดสอบต้อง assert ว่า modal/เมนูเปิดจริงก่อนวัดผล: การวัดบน element ที่ไม่มีอยู่คืนค่า object ของ error ซึ่งถูกนับเป็น truthy ทำให้ผ่านโดยไม่ได้ทดสอบอะไร
+- Brand text ที่ `>=768px` ยืดเข้าจากขอบ content 6–8px ตาม padding เดิมของ TemplateVamp (ตั้งใจคงไว้); ที่ `<=767.98px` อยู่ขอบ gutter 12px เดียวกับ content
+
 ## Current Project Tokens
 
 ```css

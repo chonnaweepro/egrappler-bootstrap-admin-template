@@ -15,7 +15,7 @@
     <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" />
+    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" />
 
     <link href="./assets/css/faq.css" rel="stylesheet" />
 
@@ -23,56 +23,28 @@
 
   </head>
 
-  <body>
+  <body class="has-subnavbar has-footer">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
       <div class="navbar-inner admin-navbar-inner">
         <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav-collapse" aria-controls="mainnav-collapse" aria-expanded="false" aria-label="Toggle primary navigation"><span class="navbar-toggler-icon"></span></button>
 
           <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
+          <ul class="navbar-nav navbar-account-nav">
+            <li class="dropdown navbar-account">
+              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large" aria-hidden="true"></i><span class="navbar-account-label">EGrappler.com</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Help</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
 
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a
-                  href="./drops.html#"
-                  class="dropdown-toggle"
-                  data-bs-toggle="dropdown" aria-expanded="false"
-                >
-                  <i class="fa-solid fa-gear"></i>
-                  Account
 
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Help</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a
-                  href="./drops.html#"
-                  class="dropdown-toggle"
-                  data-bs-toggle="dropdown" aria-expanded="false"
-                >
-                  <i class="fa-solid fa-user-large"></i>
-                  EGrappler.com
-
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-
-            <form class="navbar-search float-end" role="search" aria-label="Template search">
-              <input type="search" class="form-control" placeholder="Search" aria-label="Template search" />
-            </form>
-          </div>
-          <!--/.nav-collapse -->
         </div>
         <!-- /container -->
       </div>
@@ -83,7 +55,7 @@
     <div class="subnavbar">
       <div class="subnavbar-inner">
         <div class="container">
-          <ul class="mainnav">
+          <ul class="mainnav collapse mainnav-collapse" id="mainnav-collapse">
             <li>
               <a href="./index.html">
                 <i class="fa-solid fa-tachometer-alt-fast"></i>
@@ -150,6 +122,7 @@
                 </li>
               </ul>
             </li>
+
           </ul>
         </div>
         <!-- /container -->
@@ -158,7 +131,8 @@
     </div>
     <!-- /subnavbar -->
 
-    <div class="main">
+    <main class="main" id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">Icons</h1>
       <div class="main-inner">
         <div class="container">
           <div class="row all-icons">
@@ -172,229 +146,229 @@
                 <div class="row">
                 <div class="col-md-3 ML0">
                   <ul>
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-martini-glass"></i> fa-solid fa-martini-glass
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-music"></i> fa-solid fa-music
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-search"></i> fa-solid fa-search
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-envelope"></i> fa-solid fa-envelope
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-heart"></i> fa-solid fa-heart
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-star"></i> fa-solid fa-star
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-star"></i> fa-solid fa-star
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-user-large"></i> fa-solid fa-user-large
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-film-simple"></i> fa-solid fa-film-simple
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-th-large"></i> fa-solid fa-th-large
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-th"></i> fa-solid fa-th
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-list-squares"></i> fa-solid fa-list-squares
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-check"></i> fa-solid fa-check
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-xmark"></i> fa-solid fa-xmark
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-search-plus"></i> fa-solid fa-search-plus
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-search-minus"></i> fa-solid fa-search-minus
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-power-off"></i> fa-solid fa-power-off
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-signal-perfect"></i> fa-solid fa-signal-perfect
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-gear"></i> fa-solid fa-gear
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-trash"></i> fa-solid fa-trash
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-house"></i> fa-solid fa-house
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-file-text"></i> fa-solid fa-file-text
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-clock-four"></i> fa-solid fa-clock-four
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-road"></i> fa-solid fa-road
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-download"></i>
                       fa-solid fa-download
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-download"></i> fa-solid fa-download
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-upload"></i> fa-solid fa-upload
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-inbox"></i> fa-solid fa-inbox
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-play-circle"></i>
                       fa-solid fa-play-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-repeat"></i> fa-solid fa-repeat
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sync"></i> fa-solid fa-sync
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-rectangle-list"></i> fa-solid fa-rectangle-list
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-lock"></i> fa-solid fa-lock
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-flag"></i> fa-solid fa-flag
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-headphones-simple"></i> fa-solid fa-headphones-simple
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-volume-off"></i> fa-solid fa-volume-off
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-volume-low"></i>
                       fa-solid fa-volume-low
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-volume-up"></i> fa-solid fa-volume-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-qrcode"></i> fa-solid fa-qrcode
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-barcode"></i> fa-solid fa-barcode
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-tag"></i> fa-solid fa-tag
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-tags"></i> fa-solid fa-tags
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-book"></i> fa-solid fa-book
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-bookmark"></i> fa-solid fa-bookmark
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-print"></i> fa-solid fa-print
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-camera-alt"></i> fa-solid fa-camera-alt
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-font"></i> fa-solid fa-font
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-bold"></i> fa-solid fa-bold
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-italic"></i> fa-solid fa-italic
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-text-height"></i>
                       fa-solid fa-text-height
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-text-width"></i> fa-solid fa-text-width
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-align-left"></i> fa-solid fa-align-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-align-center"></i>
                       fa-solid fa-align-center
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-align-right"></i>
                       fa-solid fa-align-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-align-justify"></i>
                       fa-solid fa-align-justify
                     </li>
@@ -403,240 +377,240 @@
 
                 <div class="col-md-3 ML0">
                   <ul>
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-list-squares"></i> fa-solid fa-list-squares
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-indent"></i>
                       fa-solid fa-indent
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-outdent"></i>
                       fa-solid fa-outdent
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-video-camera"></i>
                       fa-solid fa-video-camera
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-image"></i> fa-solid fa-image
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-pencil-alt"></i> fa-solid fa-pencil-alt
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-map-marker"></i> fa-solid fa-map-marker
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-half-stroke"></i> fa-solid fa-circle-half-stroke
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-tint"></i> fa-solid fa-tint
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-pen-to-square"></i> fa-solid fa-pen-to-square
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-share"></i> fa-solid fa-share
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-check"></i> fa-solid fa-check
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-arrows-up-down-left-right"></i> fa-solid fa-arrows-up-down-left-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-step-backward"></i>
                       fa-solid fa-step-backward
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-fast-backward"></i>
                       fa-solid fa-fast-backward
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-backward"></i> fa-solid fa-backward
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-play"></i> fa-solid fa-play
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-pause"></i> fa-solid fa-pause
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-stop"></i> fa-solid fa-stop
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-forward"></i> fa-solid fa-forward
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-forward-fast"></i>
                       fa-solid fa-forward-fast
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-step-forward"></i>
                       fa-solid fa-step-forward
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-eject"></i> fa-solid fa-eject
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-chevron-left"></i>
                       fa-solid fa-chevron-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-chevron-right"></i>
                       fa-solid fa-chevron-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-plus-circle"></i> fa-solid fa-plus-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-minus-circle"></i> fa-solid fa-minus-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-xmark-square"></i>
                       fa-solid fa-xmark-square
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-square-check"></i> fa-solid fa-square-check
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-question-circle"></i>
                       fa-solid fa-question-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-info-circle"></i> fa-solid fa-info-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-crosshairs"></i> fa-solid fa-crosshairs
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-xmark-circle"></i>
                       fa-solid fa-xmark-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-check"></i> fa-solid fa-circle-check
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-cancel"></i> fa-solid fa-cancel
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-arrow-left"></i> fa-solid fa-arrow-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-arrow-right"></i>
                       fa-solid fa-arrow-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-arrow-up"></i> fa-solid fa-arrow-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-arrow-down"></i> fa-solid fa-arrow-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-share-nodes"></i> fa-solid fa-share-nodes
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-expand"></i>
                       fa-solid fa-expand
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-compress"></i>
                       fa-solid fa-compress
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-plus"></i> fa-solid fa-plus
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-subtract"></i> fa-solid fa-subtract
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-asterisk"></i> fa-solid fa-asterisk
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-exclamation-circle"></i>
                       fa-solid fa-exclamation-circle
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-gift"></i> fa-solid fa-gift
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-leaf"></i> fa-solid fa-leaf
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-fire"></i> fa-solid fa-fire
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-eye"></i> fa-solid fa-eye
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-eye-slash"></i> fa-solid fa-eye-slash
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-warning"></i>
                       fa-solid fa-warning
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-plane"></i> fa-solid fa-plane
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-calendar"></i> fa-solid fa-calendar
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-shuffle"></i> fa-solid fa-shuffle
                     </li>
                   </ul>
@@ -644,245 +618,245 @@
 
                 <div class="col-md-3">
                   <ul>
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-comment"></i> fa-solid fa-comment
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-magnet"></i> fa-solid fa-magnet
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-chevron-up"></i> fa-solid fa-chevron-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-chevron-down"></i>
                       fa-solid fa-chevron-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-retweet"></i> fa-solid fa-retweet
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-shopping-cart"></i>
                       fa-solid fa-shopping-cart
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-folder-blank"></i>
                       fa-solid fa-folder-blank
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-folder-open"></i>
                       fa-solid fa-folder-open
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-up-down"></i>
                       fa-solid fa-up-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-left-right"></i>
                       fa-solid fa-left-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-chart-bar"></i> fa-solid fa-chart-bar
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-twitter-square"></i>
                       fa-brands fa-twitter-square
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-square-facebook"></i>
                       fa-brands fa-square-facebook
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-camera-retro"></i>
                       fa-solid fa-camera-retro
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-key"></i> fa-solid fa-key
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-gears"></i> fa-solid fa-gears
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-comments"></i> fa-solid fa-comments
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-thumbs-up"></i> fa-solid fa-thumbs-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-thumbs-down"></i>
                       fa-solid fa-thumbs-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-star-half-stroke"></i> fa-solid fa-star-half-stroke
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-heart"></i>
                       fa-solid fa-heart
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sign-out-alt"></i> fa-solid fa-sign-out-alt
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-square-linkedin"></i>
                       fa-brands fa-square-linkedin
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-thumbtack"></i> fa-solid fa-thumbtack
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-external-link"></i>
                       fa-solid fa-external-link
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sign-in-alt"></i> fa-solid fa-sign-in-alt
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-trophy"></i> fa-solid fa-trophy
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-square-github"></i>
                       fa-brands fa-square-github
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-upload"></i> fa-solid fa-upload
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-lemon"></i> fa-solid fa-lemon
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-phone"></i> fa-solid fa-phone
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-square"></i>
                       fa-solid fa-square
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-bookmark"></i>
                       fa-solid fa-bookmark
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-square-phone"></i> fa-solid fa-square-phone
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-twitter"></i> fa-brands fa-twitter
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-facebook"></i> fa-brands fa-facebook
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-github"></i> fa-brands fa-github
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-unlock"></i> fa-solid fa-unlock
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-credit-card-alt"></i>
                       fa-solid fa-credit-card-alt
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-rss"></i> fa-solid fa-rss
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-hdd"></i> fa-solid fa-hdd
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-bullhorn"></i> fa-solid fa-bullhorn
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-bell"></i> fa-solid fa-bell
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-certificate"></i>
                       fa-solid fa-certificate
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-hand-point-right"></i> fa-solid fa-hand-point-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-hand-point-left"></i> fa-solid fa-hand-point-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-hand-point-up"></i> fa-solid fa-hand-point-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-hand-point-down"></i> fa-solid fa-hand-point-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-arrow-left"></i>
                       fa-solid fa-circle-arrow-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-arrow-right"></i>
                       fa-solid fa-circle-arrow-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-arrow-up"></i>
                       fa-solid fa-circle-arrow-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-circle-arrow-down"></i>
                       fa-solid fa-circle-arrow-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-globe"></i> fa-solid fa-globe
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-wrench"></i> fa-solid fa-wrench
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-tasks"></i> fa-solid fa-tasks
                     </li>
                   </ul>
@@ -890,191 +864,191 @@
 
                 <div class="col-md-3 MR0">
                   <ul>
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-filter"></i> fa-solid fa-filter
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-briefcase"></i> fa-solid fa-briefcase
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-up-down-left-right"></i> fa-solid fa-up-down-left-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-users"></i> fa-solid fa-users
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-link"></i> fa-solid fa-link
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-cloud"></i> fa-solid fa-cloud
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-flask"></i> fa-solid fa-flask
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-scissors"></i> fa-solid fa-scissors
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-copy"></i> fa-solid fa-copy
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-paperclip"></i> fa-solid fa-paperclip
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-save"></i> fa-solid fa-save
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-square"></i> fa-solid fa-square
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-stream"></i> fa-solid fa-stream
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-list-ul"></i> fa-solid fa-list-ul
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-list-ol"></i> fa-solid fa-list-ol
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-strikethrough"></i>
                       fa-solid fa-strikethrough
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-underline"></i> fa-solid fa-underline
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-table"></i> fa-solid fa-table
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-wand-magic"></i> fa-solid fa-wand-magic
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-truck"></i> fa-solid fa-truck
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-pinterest"></i> fa-brands fa-pinterest
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-square-pinterest"></i>
                       fa-brands fa-square-pinterest
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-square-google-plus"></i>
                       fa-brands fa-square-google-plus
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-google-plus-g"></i>
                       fa-brands fa-google-plus-g
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-money-bill"></i> fa-solid fa-money-bill
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-caret-down"></i> fa-solid fa-caret-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-caret-up"></i> fa-solid fa-caret-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-caret-left"></i> fa-solid fa-caret-left
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-caret-right"></i>
                       fa-solid fa-caret-right
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-table-columns"></i> fa-solid fa-table-columns
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-unsorted"></i> fa-solid fa-unsorted
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sort-down"></i> fa-solid fa-sort-down
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sort-up"></i> fa-solid fa-sort-up
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-envelope"></i>
                       fa-solid fa-envelope
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-brands fa-linkedin"></i> fa-brands fa-linkedin
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-undo"></i> fa-solid fa-undo
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-legal"></i> fa-solid fa-legal
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-tachometer-alt-fast"></i> fa-solid fa-tachometer-alt-fast
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-message"></i>
                       fa-solid fa-message
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-comments"></i>
                       fa-solid fa-comments
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-zap"></i> fa-solid fa-zap
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-sitemap"></i> fa-solid fa-sitemap
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-umbrella"></i> fa-solid fa-umbrella
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-paste"></i> fa-solid fa-paste
                     </li>
 
-                    <li style="line-height: 32px">
+                    <li class="icon-item">
                       <i class="fa-lg fa-solid fa-user-md"></i> fa-solid fa-user-md
                     </li>
                   </ul>
@@ -1088,7 +1062,7 @@
         <!-- /container -->
       </div>
       <!-- /main-inner -->
-    </div>
+    </main>
     <!-- /main -->
 
     <div class="extra">

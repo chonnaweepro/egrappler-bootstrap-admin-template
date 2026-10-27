@@ -82,6 +82,7 @@ Bootstrap Admin Template by EGrappler.com
 .stat-value {
 	display: block;
 	margin-bottom: .55em;
+	font-variant-numeric: tabular-nums;
 	
 	font-size: 30px;
 	font-weight: bold;
@@ -306,6 +307,43 @@ margin-bottom: 26px;}
 		font-size: 40px;
 	}
 }
+
+/* Desktop dashboard polish: improve hierarchy without replacing the original widgets. */
+@media (min-width: 992px) {
+  #big_stats .stat {
+    height: 104px;
+    vertical-align: middle;
+  }
+
+  #big_stats .stat h4 {
+    margin-bottom: 10px;
+  }
+
+  #big_stats .stat .value {
+    font-size: 40px;
+  }
+
+  .dashboard-chart .widget-content > canvas.chart-holder,
+  .main .widget-content > canvas.chart-holder {
+    min-height: 312px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  #big_stats {
+    margin-top: 1em;
+  }
+
+  #big_stats .stat {
+    height: auto;
+    min-height: 92px;
+    margin-bottom: 20px;
+  }
+
+  #big_stats .stat h4 {
+    margin-bottom: 8px;
+  }
+}
 	
 	
 	
@@ -348,7 +386,7 @@ margin-bottom: 26px;}
 	}
 }
 
-/* Match the Bootstrap 2-era FullCalendar header and event styling. */
+/* Keep FullCalendar header and event styling consistent with the template. */
 #calendar {
 	position: relative;
 	overflow: visible;
@@ -474,7 +512,9 @@ margin-bottom: 26px;}
 #calendar button[aria-label^="Previous"] { left: 0; }
 #calendar button[aria-label^="Next"] { right: 1px; }
 #calendar button[aria-label^="Previous"] svg,
-#calendar button[aria-label^="Next"] svg { display: none; }
+#calendar button[aria-label^="Next"] svg,
+#calendar button[aria-label^="Previous"] .bi,
+#calendar button[aria-label^="Next"] .bi { display: none; }
 #calendar button[aria-label^="Previous"]::before { content: "◄"; }
 #calendar button[aria-label^="Next"]::before { content: "►"; }
 

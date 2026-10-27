@@ -6,7 +6,7 @@ Bootstrap Admin Template by EGrappler.com
 
 
 /** Base Body Styles **/
-body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em 'Open Sans', 'Noto Sans Thai UI', sans-serif;}
+body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em var(--font-ui);}
 
 
 .account-container {
@@ -38,11 +38,11 @@ body{ background: url(../img/body-bg.png); color:#838383; font: 13px/1.7em 'Open
 }
 
 .login-fields label {
-	display: none;
+	display: block;
 }
 
 .login-fields input {
-	font-family: 'Open Sans', 'Noto Sans Thai UI', sans-serif;
+	font-family: var(--font-ui);
 	box-sizing: content-box;
 	border: 1px solid #ccc;
 	border-radius: 3px;
@@ -250,15 +250,157 @@ span.login-checkbox > input[type='checkbox']:checked + label {
 	
 }
 
-/* Keep field labels available to assistive technology without changing the original layout. */
-.account-container .login-fields label {
+@media (max-width: 480px) {
+  .account-container .login-fields { padding-right: 0; padding-left: 0; }
+  .account-container .login-fields input { box-sizing: border-box; width: 100%; }
+}
+
+/* Keep the original sign-in card, but use a touch-friendly form rhythm. */
+.account-container {
+  max-width: 480px;
+  box-sizing: border-box;
+}
+
+.account-container .content {
+  padding: 24px 28px 26px;
+}
+
+.account-container h1 {
+  margin-bottom: 8px;
+  line-height: 1.25;
+}
+
+.login-fields {
+  padding-right: 34px;
+  padding-left: 34px;
+}
+
+.login-fields > p {
+  margin-bottom: 16px;
+}
+
+.login-fields .field {
+  margin-bottom: 16px;
+}
+
+.login-fields label {
+  margin-bottom: 6px;
+  color: #555;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.login-fields input {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 44px;
+  padding-top: 11px;
+  padding-bottom: 11px;
+  font-size: 16px;
+}
+
+.password-field-wrapper {
+  position: relative;
+}
+
+.password-field-wrapper .password-field {
+  padding-right: 52px;
+}
+
+.password-toggle {
   position: absolute;
-  width: 1px;
-  height: 1px;
+  top: 50%;
+  right: 6px;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
   padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
+  color: #666;
+  background: transparent;
   border: 0;
+  border-radius: 4px;
+  transform: translateY(-50%);
+}
+
+.password-toggle:hover,
+.password-toggle:focus-visible {
+  color: #333;
+  background: rgba(66, 139, 202, .1);
+}
+
+.login-actions {
+  display: flex;
+  float: none;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+span.login-checkbox {
+  float: none;
+  display: flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 0;
+}
+
+span.login-checkbox > input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  margin: 0 6px 0 0;
+  opacity: 1;
+}
+
+span.login-checkbox > input[type='checkbox'] + label {
+  height: auto;
+  padding: 0;
+  background: none;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.button {
+  float: none;
+  min-height: 44px;
+  margin-top: 0;
+  padding: 10px 18px;
+}
+
+@media (max-width: 480px) {
+  .account-container {
+    width: calc(100% - 24px);
+    margin-top: 24px;
+  }
+
+  .account-container .content {
+    padding: 20px 16px 22px;
+  }
+
+  .login-fields {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .login-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  span.login-checkbox {
+    width: 100%;
+  }
+
+  .button {
+    width: 100%;
+  }
+
+  .login-extra {
+    width: calc(100% - 24px);
+    margin-top: 16px;
+  }
 }

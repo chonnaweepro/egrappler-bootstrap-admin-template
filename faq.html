@@ -13,7 +13,7 @@
     <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" />
+    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" />
 
     <link href="./assets/css/faq.css?v=20261026-compat-2" rel="stylesheet" />
 
@@ -21,48 +21,28 @@
 
   </head>
 
-  <body>
+  <body class="has-subnavbar has-footer">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
       <div class="navbar-inner admin-navbar-inner">
         <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav-collapse" aria-controls="mainnav-collapse" aria-expanded="false" aria-label="Toggle primary navigation"><span class="navbar-toggler-icon"></span></button>
 
           <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
+          <ul class="navbar-nav navbar-account-nav">
+            <li class="dropdown navbar-account">
+              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large" aria-hidden="true"></i><span class="navbar-account-label">EGrappler.com</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Help</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
 
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-gear"></i>
-                  Account
 
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Help</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa-solid fa-user-large"></i>
-                  EGrappler.com
-
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-
-            <form class="navbar-search float-end" role="search" aria-label="Template search">
-              <input type="search" class="form-control" placeholder="Search" aria-label="Template search" />
-            </form>
-          </div>
-          <!--/.nav-collapse -->
         </div>
         <!-- /container -->
       </div>
@@ -73,7 +53,7 @@
     <div class="subnavbar">
       <div class="subnavbar-inner">
         <div class="container">
-          <ul class="mainnav">
+          <ul class="mainnav collapse mainnav-collapse" id="mainnav-collapse">
             <li>
               <a href="./index.html">
                 <i class="fa-solid fa-tachometer-alt-fast"></i>
@@ -128,6 +108,7 @@
                 <li><a class="dropdown-item" href="./error.html">404</a></li>
               </ul>
             </li>
+
           </ul>
         </div>
         <!-- /container -->
@@ -136,7 +117,8 @@
     </div>
     <!-- /subnavbar -->
 
-    <div class="main">
+    <main class="main" id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">FAQ</h1>
       <div class="main-inner">
         <div class="container">
           <div class="row">
@@ -303,7 +285,7 @@
         <!-- /container -->
       </div>
       <!-- /main-inner -->
-    </div>
+    </main>
     <!-- /main -->
 
     <div class="extra">

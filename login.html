@@ -19,11 +19,12 @@
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
         <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/signin.css?v=20261026-compat-1" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/signin.css?v=20261027-compat-3" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
       <div class="navbar-inner admin-navbar-inner">
         <div class="container">
@@ -53,7 +54,7 @@
     </div>
     <!-- /navbar -->
 
-    <div class="account-container">
+    <main class="account-container" id="main-content" tabindex="-1">
       <div class="content clearfix">
         <form action="#" method="post">
           <h1>Member Login</h1>
@@ -67,21 +68,28 @@
                 type="text"
                 id="username"
                 name="username"
+                autocomplete="username"
                 value=""
                 placeholder="Username"
+                required
                  class="login username-field" />
             </div>
             <!-- /field -->
 
             <div class="field">
               <label for="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value=""
-                placeholder="Password"
-                 class="login password-field" />
+              <div class="password-field-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  autocomplete="current-password"
+                  value=""
+                  placeholder="Password"
+                  required
+                  class="login password-field" />
+                <button type="button" class="password-toggle" aria-controls="password" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+              </div>
             </div>
             <!-- /password -->
           </div>
@@ -100,14 +108,14 @@
               <label class="choice" for="Field">Keep me signed in</label>
             </span>
 
-            <button class="button btn btn-success btn-lg">Sign In</button>
+            <button type="submit" class="button btn btn-primary btn-lg">Sign In</button>
           </div>
           <!-- .actions -->
 
         </form>
       </div>
       <!-- /content -->
-    </div>
+    </main>
     <!-- /account-container -->
 
     <div class="login-extra">

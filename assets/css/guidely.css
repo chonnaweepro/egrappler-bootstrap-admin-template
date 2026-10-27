@@ -47,7 +47,7 @@
 }
 
 .guidely-guide h4 {
-  font-family: Helvetica, arial, 'Noto Sans Thai UI', sans-serif;
+  font-family: var(--font-ui);
   font-size: 15px;
   font-weight: bold;
   color: #333;
@@ -134,7 +134,7 @@
 }
 
 .guidely-close-trigger {
-  font-family: Helvetica, arial, 'Noto Sans Thai UI', sans-serif;
+  font-family: var(--font-ui);
   font-size: 13px;
   font-weight: bold;
   text-decoration: none;
@@ -168,4 +168,12 @@
 
 #guide-welcome .guidely-guide-pad {
   padding: 15px 15px 5px 15px;
+}
+
+/* Demo grid headings: h2 for document outline, h1 metrics for appearance. */
+.tour-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 36px;
 }

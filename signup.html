@@ -19,11 +19,12 @@
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
         <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" type="text/css" />
-    <link href="./assets/css/signin.css?v=20261026-compat-1" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" type="text/css" />
+    <link href="./assets/css/signin.css?v=20261027-compat-3" rel="stylesheet" type="text/css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
       <div class="navbar-inner admin-navbar-inner">
         <div class="container">
@@ -54,7 +55,7 @@
     </div>
     <!-- /navbar -->
 
-    <div class="account-container register">
+    <main class="account-container register" id="main-content" tabindex="-1">
       <div class="content clearfix">
         <form action="#" method="post">
           <h1>Signup for Free Account</h1>
@@ -68,8 +69,10 @@
                 type="text"
                 id="firstname"
                 name="firstname"
+                autocomplete="given-name"
                 value=""
                 placeholder="First Name"
+                required
                  class="login" />
             </div>
             <!-- /field -->
@@ -80,8 +83,10 @@
                 type="text"
                 id="lastname"
                 name="lastname"
+                autocomplete="family-name"
                 value=""
                 placeholder="Last Name"
+                required
                  class="login" />
             </div>
             <!-- /field -->
@@ -89,36 +94,48 @@
             <div class="field">
               <label for="email">Email Address:</label>
               <input
-                type="text"
+                type="email"
                 id="email"
                 name="email"
+                autocomplete="email"
                 value=""
                 placeholder="Email"
+                required
                  class="login" />
             </div>
             <!-- /field -->
 
             <div class="field">
               <label for="password">Password:</label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                value=""
-                placeholder="Password"
-                 class="login" />
+              <div class="password-field-wrapper">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  autocomplete="new-password"
+                  value=""
+                  placeholder="Password"
+                  required
+                  class="login password-field" />
+                <button type="button" class="password-toggle" aria-controls="password" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+              </div>
             </div>
             <!-- /field -->
 
             <div class="field">
               <label for="confirm_password">Confirm Password:</label>
-              <input
-                type="password"
-                id="confirm_password"
-                name="confirm_password"
-                value=""
-                placeholder="Confirm Password"
-                 class="login" />
+              <div class="password-field-wrapper">
+                <input
+                  type="password"
+                  id="confirm_password"
+                  name="confirm_password"
+                  autocomplete="new-password"
+                  value=""
+                  placeholder="Confirm Password"
+                  required
+                  class="login password-field" />
+                <button type="button" class="password-toggle" aria-controls="confirm_password" aria-label="Show password" aria-pressed="false"><i class="fa-solid fa-eye" aria-hidden="true"></i></button>
+              </div>
             </div>
             <!-- /field -->
           </div>
@@ -139,14 +156,14 @@
               >
             </span>
 
-            <button class="button btn btn-primary btn-lg">Register</button>
+            <button type="submit" class="button btn btn-primary btn-lg">Register</button>
           </div>
           <!-- .actions -->
 
         </form>
       </div>
       <!-- /content -->
-    </div>
+    </main>
     <!-- /account-container -->
 
     <!-- Text Under Box -->

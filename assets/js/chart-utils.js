@@ -31,13 +31,34 @@
       tension: 0.3,
     }];
 
+    canvas.setAttribute("role", "img");
+    canvas.setAttribute("tabindex", "0");
+    canvas.setAttribute(
+      "aria-label",
+      `${datasets.map((dataset) => dataset.label).join(", ")} chart`
+    );
+
+    let summary = document.getElementById(`${id}-summary`);
+    if (!summary) {
+      summary = document.createElement("p");
+      summary.id = `${id}-summary`;
+      summary.className = "visually-hidden chart-summary";
+      canvas.insertAdjacentElement("afterend", summary);
+    }
+    summary.textContent = datasets
+      .map((dataset) => `${dataset.label}: ${dataset.data.join(", ")}`)
+      .join(". ");
+
     return new Chart(canvas, {
       type,
       data: { labels, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
-        plugins: { legend: { display: false } },
+        plugins: {
+          legend: { display: datasets.length > 1, position: "bottom" },
+          tooltip: { mode: "index", intersect: false },
+        },
         scales: ["doughnut", "pie", "polarArea"].includes(type) ? {} : axis,
         ...options.chartOptions,
       },

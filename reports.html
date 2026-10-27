@@ -15,64 +15,36 @@
     <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261026-compat-13" rel="stylesheet" />
+    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" />
 
-    <link href="./assets/css/reports.css?v=20261026-layout-2" rel="stylesheet" />
+    <link href="./assets/css/reports.css?v=20261027-reports-2" rel="stylesheet" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
 
   </head>
 
-  <body>
+  <body class="has-subnavbar has-footer">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <div class="navbar navbar-expand-lg navbar-dark admin-navbar">
       <div class="navbar-inner admin-navbar-inner">
         <div class="container">
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainnav-collapse" aria-controls="mainnav-collapse" aria-expanded="false" aria-label="Toggle primary navigation"><span class="navbar-toggler-icon"></span></button>
 
           <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
+          <ul class="navbar-nav navbar-account-nav">
+            <li class="dropdown navbar-account">
+              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large" aria-hidden="true"></i><span class="navbar-account-label">EGrappler.com</span></a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
+                <li><a class="dropdown-item" href="javascript:;">Help</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
 
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item dropdown">
-                <a
-                  href="./reports.html#"
-                  class="dropdown-toggle"
-                  data-bs-toggle="dropdown" aria-expanded="false"
-                >
-                  <i class="fa-solid fa-gear"></i>
-                  Account
 
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Help</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a
-                  href="./reports.html#"
-                  class="dropdown-toggle"
-                  data-bs-toggle="dropdown" aria-expanded="false"
-                >
-                  <i class="fa-solid fa-user-large"></i>
-                  EGrappler.com
-
-                </a>
-
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
-                  <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
-                </ul>
-              </li>
-            </ul>
-
-            <form class="navbar-search float-end" role="search" aria-label="Template search">
-              <input type="search" class="form-control" placeholder="Search" aria-label="Template search" />
-            </form>
-          </div>
-          <!--/.nav-collapse -->
         </div>
         <!-- /container -->
       </div>
@@ -83,7 +55,7 @@
     <div class="subnavbar">
       <div class="subnavbar-inner">
         <div class="container">
-          <ul class="mainnav">
+          <ul class="mainnav collapse mainnav-collapse" id="mainnav-collapse">
             <li>
               <a href="./index.html">
                 <i class="fa-solid fa-tachometer-alt-fast"></i>
@@ -150,6 +122,7 @@
                 </li>
               </ul>
             </li>
+
           </ul>
         </div>
         <!-- /container -->
@@ -158,7 +131,8 @@
     </div>
     <!-- /subnavbar -->
 
-    <div class="main">
+    <main class="main" id="main-content" tabindex="-1">
+      <h1 class="visually-hidden">Reports</h1>
       <div class="main-inner">
         <div class="container">
           <div class="row">
@@ -168,20 +142,18 @@
                   <div class="col-md-4">
                     <div class="stats-box-title">Vizitor</div>
                     <div class="stats-box-all-info">
-                      <i class="fa-solid fa-user-large" style="color: #3366cc"></i> 555K
+                      <i class="fa-solid fa-user-large stat-icon-visitor"></i> 555K
                     </div>
                     <div class="wrap-chart">
                       <div
                         id="visitor-stat"
                         class="chart"
-                        style="padding: 0px; position: relative"
                       >
                         <canvas
                           id="bar-chart1"
                           class="chart-holder"
                           height="187"
                           width="406"
-                          style="width: 325px; height: 150px"
                         ></canvas>
                       </div>
                     </div>
@@ -190,20 +162,18 @@
                   <div class="col-md-4">
                     <div class="stats-box-title">Likes</div>
                     <div class="stats-box-all-info">
-                      <i class="fa-solid fa-thumbs-up" style="color: #f30"></i> 66.66
+                      <i class="fa-solid fa-thumbs-up stat-icon-like"></i> 66.66
                     </div>
                     <div class="wrap-chart">
                       <div
                         id="order-stat"
                         class="chart"
-                        style="padding: 0px; position: relative"
                       >
                         <canvas
                           id="bar-chart2"
                           class="chart-holder"
                           height="187"
                           width="406"
-                          style="width: 325px; height: 150px"
                         ></canvas>
                       </div>
                     </div>
@@ -212,21 +182,19 @@
                   <div class="col-md-4">
                     <div class="stats-box-title">Orders</div>
                     <div class="stats-box-all-info">
-                      <i class="fa-solid fa-shopping-cart" style="color: #3c3"></i>
+                      <i class="fa-solid fa-shopping-cart stat-icon-order"></i>
                       15.55
                     </div>
                     <div class="wrap-chart">
                       <div
                         id="user-stat"
                         class="chart"
-                        style="padding: 0px; position: relative"
                       >
                         <canvas
                           id="bar-chart3"
                           class="chart-holder"
                           height="187"
                           width="406"
-                          style="width: 325px; height: 150px"
                         ></canvas>
                       </div>
                     </div>
@@ -253,7 +221,6 @@
                     class="chart-holder"
                     height="312"
                     width="672"
-                    style="width: 538px; height: 250px"
                   ></canvas>
                 </div>
                 <!-- /widget-content -->
@@ -276,7 +243,6 @@
                     class="chart-holder"
                     height="312"
                     width="672"
-                    style="width: 538px; height: 250px"
                   ></canvas>
                 </div>
                 <!-- /widget-content -->
@@ -290,7 +256,7 @@
         <!-- /container -->
       </div>
       <!-- /main-inner -->
-    </div>
+    </main>
     <!-- /main -->
 
     <div class="extra">

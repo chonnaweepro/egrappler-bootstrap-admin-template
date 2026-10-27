@@ -263,6 +263,22 @@ Accessibility rule:
 - สี success/warning/danger ต้องมี text, icon หรือ pattern ประกอบ ไม่ใช้สีอย่างเดียว
 - สถานะบน chart ต้องไม่พึ่งพาสีเพียงอย่างเดียว
 
+### Contrast-checked values (วัดจาก DOM จริง 11 หน้า × 1280/375px: 0 fail)
+
+| ใช้กับ | ค่าเดิม | ค่าที่ใช้ | Ratio |
+|---|---|---|---|
+| Header / brand พื้นหลัง (white text) | `#428bca` | `#3a7ab2` (`--admin-blue`) | 4.56 |
+| ข้อความเมนูที่ไม่ active | `#b2afaa` | `#777572` | 4.59 |
+| ลิงก์ | `#08c` | `#0076b1` | 4.6 |
+| ข้อความรอง (h6, stat, news) | `#999` / `#888` / `#777` | `#747474` / `#757575` / `#6f6f6f` | ≥4.6 |
+| ปุ่ม primary / success / info (white text) | `#21a9ec` / `#7eb216` / `#4eb2d5` | `#187bac` / `#597e10` / `#367c94` | ≥4.7 |
+| ปุ่ม warning | white on `#f5a732` | `#1a1a1a` on `#f5a732` | 7+ |
+| Teal พื้นหลัง / ข้อความ | `#00ba8b` / `#19bc9c` | `#008664` / `#12856f` | 4.56 |
+| Alert text (success/info/warning/danger) | bootstrap 2 | `#3d763e` / `#306f8e` / `#886c3b` / `#a84342` | ≥4.56 |
+
+กฎ: สีสว่างที่เป็น brand ใช้เป็นพื้นผิว/ไอคอนได้ แต่ข้อความบนสีนั้นต้องผ่าน 4.5:1 (ข้อความขนาดใหญ่ ≥24px หรือ ≥18.66px bold ผ่านที่ 3:1)
+ปุ่มที่พื้นหลังสว่างเกินไปสำหรับ white text (warning) ให้เปลี่ยนสีตัวอักษรเป็นเข้ม ไม่ใช่ทำให้ปุ่มคล้ำ
+
 ## 12.2 Font Standard
 
 ใช้ font ที่ self-host ภายในโปรเจกต์ (`assets/vendor/google-fonts.css` → `assets/vendor/fonts/`) เพื่อให้ตัวอักษรเหมือนกันทุก OS และไม่พึ่ง remote font; system font เป็นเพียง fallback สุดท้าย:
@@ -302,6 +318,14 @@ Typography rules:
 - ทุก form control ต้องมี label ที่ผูกจริง (`for`/wrap/`aria-label`)
 - `<table>` ข้อมูลต้องมี `<caption>` (ซ่อนด้วย `.visually-hidden` ได้)
 - ห้ามมี `style=""` attribute ใน HTML: ใช้ class ใน CSS เพื่อให้รองรับ CSP `style-src` แบบเข้มงวด (ค่า inline ที่ Chart.js/FullCalendar ตั้งตอน runtime ผ่าน CSSOM ไม่ถูกนับ)
+
+## 12.3.1 Links, Labels และ Line endings
+
+- ห้ามใช้ `href="javascript:;"` (ถูก CSP บล็อก) ใช้ `href="#"` และให้ `base.js` ทำ `preventDefault` กับ placeholder link ทั้ง `#` และ `<หน้านี้>#`
+- `<a data-bs-toggle="dropdown">` ต้องมี `role="button"`; `base.js` ให้ Space เปิดได้เหมือน native button
+- กลุ่ม checkbox/radio/ปุ่ม ที่ label ไม่ผูก control เดียว ใช้ `<div id="…-label">` + `<div role="group" aria-labelledby="…-label">` (ไม่ใช้ `<label>` ลอย)
+- `<title>` ต้องตรงกับ `<h1>` ของหน้า
+- `.gitattributes` กำหนด `eol=lf` สำหรับ html/css/js/md/py และ binary สำหรับรูป/font; ไฟล์ใหม่ต้องเป็น LF
 
 ## 12.4 Alignment Standard
 

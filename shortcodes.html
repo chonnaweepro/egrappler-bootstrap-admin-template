@@ -4,7 +4,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <title>Account - Bootstrap Admin Template</title>
+    <title>Shortcodes - Bootstrap Admin Template</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -15,7 +15,7 @@
     <link href="./assets/vendor/google-fonts.css?v=font-v44-local-1" rel="stylesheet" />
     <link href="./assets/vendor/fontawesome/css/all.min.css" rel="stylesheet" />
 
-    <link href="./assets/css/style.css?v=20261027-style-10" rel="stylesheet" />
+    <link href="./assets/css/style.css?v=20261027-style-11" rel="stylesheet" />
     <link href="./assets/css/shortcodes.css?v=20261027-layout-8" rel="stylesheet" />
 
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -32,13 +32,13 @@
           <a class="navbar-brand" href="./index.html"> Bootstrap Admin Template </a>
           <ul class="navbar-nav navbar-account-nav">
             <li class="dropdown navbar-account">
-              <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large" aria-hidden="true"></i><span class="navbar-account-label">EGrappler.com</span></a>
+              <a role="button" href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user-large" aria-hidden="true"></i><span class="navbar-account-label">EGrappler.com</span></a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="javascript:;">Profile</a></li>
-                <li><a class="dropdown-item" href="javascript:;">Settings</a></li>
-                <li><a class="dropdown-item" href="javascript:;">Help</a></li>
+                <li><a class="dropdown-item" href="#">Profile</a></li>
+                <li><a class="dropdown-item" href="#">Settings</a></li>
+                <li><a class="dropdown-item" href="#">Help</a></li>
                 <li><hr class="dropdown-divider" /></li>
-                <li><a class="dropdown-item" href="javascript:;">Logout</a></li>
+                <li><a class="dropdown-item" href="#">Logout</a></li>
               </ul>
             </li>
           </ul>
@@ -92,7 +92,7 @@
 
             <li class="dropdown subnavbar-open-right">
               <a
-                href="javascript:;"
+                href="#"
                 class="dropdown-toggle"
                 data-bs-toggle="dropdown" aria-expanded="false"
               >
@@ -244,9 +244,9 @@
                             </div>
 
                             <div class="row mb-3">
-                              <label class="col-sm-3 col-form-label">Checkboxes</label>
+                              <div class="col-sm-3 col-form-label" id="sc-group-1-label">Checkboxes</div>
 
-                              <div class="col-sm-9">
+                              <div role="group" aria-labelledby="sc-group-1-label" class="col-sm-9">
                                 <label class="form-check form-check-inline">
                                   <input class="form-check-input"  type="checkbox" /> Option 01
                                 </label>
@@ -258,9 +258,9 @@
                             </div>
 
                             <div class="row mb-3">
-                              <label class="col-sm-3 col-form-label">Radio Buttons</label>
+                              <div class="col-sm-3 col-form-label" id="sc-group-2-label">Radio Buttons</div>
 
-                              <div class="col-sm-9">
+                              <div role="group" aria-labelledby="sc-group-2-label" class="col-sm-9">
                                 <label class="form-check form-check-inline">
                                   <input class="form-check-input" type="radio" name="radiobtns" /> Option
                                   01
@@ -307,11 +307,9 @@
                             </div>
 
                             <div class="row mb-3">
-                              <label class="col-sm-3 col-form-label"
-                                >Dropdown in a button group</label
-                              >
+                              <div class="col-sm-3 col-form-label" id="sc-group-3-label">Dropdown in a button group</div>
 
-                              <div class="col-sm-9">
+                              <div role="group" aria-labelledby="sc-group-3-label" class="col-sm-9">
                                 <div class="btn-group">
                                   <a
                                     class="btn btn-primary"
@@ -352,11 +350,9 @@
                             </div>
 
                             <div class="row mb-3">
-                              <label class="col-sm-3 col-form-label"
-                                >Button sizes</label
-                              >
+                              <div class="col-sm-3 col-form-label" id="sc-group-4-label">Button sizes</div>
 
-                              <div class="col-sm-9">
+                              <div role="group" aria-labelledby="sc-group-4-label" class="col-sm-9">
                                 <a
                                   class="btn btn-lg"
                                   href="./shortcodes.html#"
@@ -392,8 +388,8 @@
                         <form id="edit-profile2">
                           <fieldset>
                             <div class="mb-2">
-                              <label class="form-label">Alerts</label>
-                              <div>
+                              <div class="form-label" id="sc-group-5-label">Alerts</div>
+                              <div role="group" aria-labelledby="sc-group-5-label">
                                 <div class="alert alert-success alert-dismissible" role="status" aria-live="polite">
                                   <i class="alert-icon fa-solid fa-circle-check" aria-hidden="true"></i>
                                   <div class="alert-content">
@@ -433,8 +429,8 @@
                             </div>
 
                             <div class="mb-2">
-                              <label class="form-label">Progress Bar</label>
-                              <div>
+                              <div class="form-label" id="sc-group-6-label">Progress Bar</div>
+                              <div role="group" aria-labelledby="sc-group-6-label">
                                 <div class="progress">
                                   <div class="progress-bar progress-w-60" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"></div>
                                 </div>
@@ -450,8 +446,8 @@
                             </div>
 
                             <div class="mb-2">
-                              <label class="form-label">Accordion</label>
-                              <div>
+                              <div class="form-label" id="sc-group-7-label">Accordion</div>
+                              <div role="group" aria-labelledby="sc-group-7-label">
                                 <div class="accordion" id="accordion2">
                                   <div class="accordion-item">
                                     <div class="accordion-header">
@@ -514,8 +510,8 @@
                             </div>
 
                             <div class="mb-2">
-                              <label class="form-label">Modal</label>
-                              <div>
+                              <div class="form-label" id="sc-group-8-label">Modal</div>
+                              <div role="group" aria-labelledby="sc-group-8-label">
                                 <!-- Button to trigger modal -->
                                 <button type="button" class="btn btn-primary modal-trigger" data-bs-toggle="modal" data-bs-target="#myModal">Launch demo modal</button>
 
@@ -548,10 +544,8 @@
                             </div>
 
                             <div class="mb-2">
-                              <label class="form-label"
-                                >Social Buttons</label
-                              >
-                              <div>
+                              <div class="form-label" id="sc-group-9-label">Social Buttons</div>
+                              <div role="group" aria-labelledby="sc-group-9-label">
                                 <button type="button" class="btn btn-facebook-alt">
                                   <i class="fa-brands fa-square-facebook"></i> Facebook
                                 </button>
@@ -613,33 +607,33 @@
             <div class="col-md-3">
               <h4>About Free Admin Template</h4>
               <ul>
-                <li><a href="javascript:;">EGrappler.com</a></li>
-                <li><a href="javascript:;">Web Development Resources</a></li>
+                <li><a href="#">EGrappler.com</a></li>
+                <li><a href="#">Web Development Resources</a></li>
                 <li>
-                  <a href="javascript:;"
+                  <a href="#"
                     >Responsive HTML5 Portfolio Templates</a
                   >
                 </li>
-                <li><a href="javascript:;">Free Resources and Scripts</a></li>
+                <li><a href="#">Free Resources and Scripts</a></li>
               </ul>
             </div>
             <!-- /col-md-3 -->
             <div class="col-md-3">
               <h4>Support</h4>
               <ul>
-                <li><a href="javascript:;">Frequently Asked Questions</a></li>
-                <li><a href="javascript:;">Ask a Question</a></li>
-                <li><a href="javascript:;">Video Tutorial</a></li>
-                <li><a href="javascript:;">Feedback</a></li>
+                <li><a href="#">Frequently Asked Questions</a></li>
+                <li><a href="#">Ask a Question</a></li>
+                <li><a href="#">Video Tutorial</a></li>
+                <li><a href="#">Feedback</a></li>
               </ul>
             </div>
             <!-- /col-md-3 -->
             <div class="col-md-3">
               <h4>Something Legal</h4>
               <ul>
-                <li><a href="javascript:;">Read License</a></li>
-                <li><a href="javascript:;">Terms of Use</a></li>
-                <li><a href="javascript:;">Privacy Policy</a></li>
+                <li><a href="#">Read License</a></li>
+                <li><a href="#">Terms of Use</a></li>
+                <li><a href="#">Privacy Policy</a></li>
               </ul>
             </div>
             <!-- /col-md-3 -->
@@ -696,6 +690,6 @@
 
 
     <script src="./assets/vendor/bootstrap.bundle.min.js"></script>
-    <script src="./assets/js/base.js"></script>
+    <script src="./assets/js/base.js?v=20261027-base-2"></script>
   </body>
 </html>

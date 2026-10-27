@@ -249,11 +249,11 @@ textarea {
 	
 	font-size: 12px;
 	font-weight: bold;
-	color: #b2afaa;
+	color: #777572;
 }
 
 .subnavbar .container > ul > li > a:hover {
-	color: #888;
+	color: #666;
 	text-decoration: none;
 }
 
@@ -361,7 +361,7 @@ textarea {
 }
 
 .extra a {
-	color: #666;
+	color: #838383;
 }
 
 .extra h4 {
@@ -651,7 +651,7 @@ ul.messages_layout li.by_myself .message_wrap {
 	border: 1px solid #b3cdf8
 }
 ul.messages_layout li.by_myself .message_wrap .info a.name {
-	color: #4a8cf7
+	color: #3d74cd
 }
 ul.messages_layout li a.avatar {
 	position: absolute;
@@ -914,15 +914,15 @@ html .fc, .fc table {
 }
 .fc-state-down {
 	border-color: #555;
-	background: #777
+	background: #6e6e6e
 }
 .fc-state-active, .fc-state-active .fc-button-inner {
 	border-color: #555;
-	background: #777;
+	background: #6e6e6e;
 	color: #fff
 }
 .fc-state-disabled, .fc-state-disabled .fc-button-inner {
-	color: #999;
+	color: #757575;
 	border-color: #ddd
 }
 .fc-state-disabled {
@@ -948,7 +948,7 @@ a.fc-event {
 }
 .fc-event-skin {
 	border-color: #3f85f5;
-	background-color: #5e96ea;
+	background-color: #4a76b9;
 	color: #fff
 }
 .fc-event-inner {
@@ -1472,24 +1472,24 @@ color: #333;
 .alert {
   padding: 8px 35px 8px 14px;
   margin-bottom: 20px;
-  color: #c09853;
+  color: #886c3b;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
   background-color: #fcf8e3;
   border: 1px solid #fbeed5;
   border-radius: 4px;
 }
 .alert-success {
-  color: #468847;
+  color: #3d763e;
   background-color: #dff0d8;
   border-color: #d6e9c6;
 }
 .alert-info {
-  color: #3a87ad;
+  color: #306f8e;
   background-color: #d9edf7;
   border-color: #bce8f1;
 }
 .alert-danger {
-  color: #b94a48;
+  color: #a84342;
   background-color: #f2dede;
   border-color: #eed3d7;
 }
@@ -1624,8 +1624,8 @@ color: #333;
   --bs-primary-rgb: 33, 169, 236;
   --bs-body-color: #333;
   --bs-body-bg: #f9f6f1;
-  --bs-link-color: #08c;
-  --bs-link-color-rgb: 0, 136, 204;
+  --bs-link-color: #0076b1;
+  --bs-link-color-rgb: 0, 118, 177;
   --bs-link-hover-color: #005580;
   --bs-link-hover-color-rgb: 0, 85, 128;
   --bs-border-radius: 4px;
@@ -1640,7 +1640,7 @@ color: #333;
 
 /* Bootstrap 2 typography and document rhythm retained under Bootstrap 5. */
 a {
-  color: #08c;
+  color: #0076b1;
   text-decoration: none;
 }
 a:hover, a:focus {
@@ -1661,9 +1661,9 @@ h3 { font-size: 18px; line-height: 27px; }
 h4, h5, h6 { line-height: 18px; }
 h4 { font-size: 14px; }
 h5 { font-size: 12px; }
-h6 { color: #999; font-size: 11px; text-transform: uppercase; }
+h6 { color: #747474; font-size: 11px; text-transform: uppercase; }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
-  color: #999;
+  color: #747474;
   font-weight: normal;
 }
 h1 small, h2 small { font-size: 18px; }
@@ -1713,46 +1713,46 @@ hr {
 }
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #21a9ec;
+  --bs-btn-bg: #187bac;
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #1399dc;
+  --bs-btn-hover-bg: #0e70a1;
   --bs-btn-hover-border-color: rgba(0, 0, 0, .15);
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #0f79ad;
+  --bs-btn-active-bg: #0b587e;
   --bs-btn-active-border-color: rgba(0, 0, 0, .15);
-  --bs-btn-focus-shadow-rgb: 33, 169, 236;
+  --bs-btn-focus-shadow-rgb: 24, 123, 172;
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
-  background-image: linear-gradient(rgba(33, 169, 236, 0), rgba(1, 9, 13, .1));
+  background-image: linear-gradient(rgba(24, 123, 172, 0), rgba(1, 9, 13, .1));
 }
 .btn-success {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #7eb216;
+  --bs-btn-bg: #597e10;
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #6e9b13;
+  --bs-btn-hover-bg: #4e6e0d;
   --bs-btn-hover-border-color: rgba(0, 0, 0, .15);
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #4e6e0e;
+  --bs-btn-active-bg: #374e0a;
   --bs-btn-active-border-color: rgba(0, 0, 0, .15);
-  --bs-btn-focus-shadow-rgb: 126, 178, 22;
+  --bs-btn-focus-shadow-rgb: 89, 126, 16;
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
-  background-image: linear-gradient(rgba(126, 178, 22, 0), rgba(0, 0, 0, .1));
+  background-image: linear-gradient(rgba(89, 126, 16, 0), rgba(0, 0, 0, .1));
 }
 .btn-warning {
-  --bs-btn-color: #fff;
+  --bs-btn-color: #1a1a1a;
   --bs-btn-bg: #f5a732;
   --bs-btn-border-color: rgba(0, 0, 0, .1);
-  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-color: #1a1a1a;
   --bs-btn-hover-bg: #f49a15;
   --bs-btn-hover-border-color: rgba(0, 0, 0, .15);
-  --bs-btn-active-color: #fff;
+  --bs-btn-active-color: #1a1a1a;
   --bs-btn-active-bg: #cb7e0a;
   --bs-btn-active-border-color: rgba(0, 0, 0, .15);
-  color: #fff;
-  text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
+  color: #1a1a1a;
+  text-shadow: none;
   background-image: linear-gradient(rgba(245, 167, 50, 0), rgba(38, 24, 2, .1));
 }
 .btn-danger {
@@ -1771,17 +1771,17 @@ hr {
 }
 .btn-info {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #4eb2d5;
+  --bs-btn-bg: #367c94;
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: #35a7cf;
+  --bs-btn-hover-bg: #257490;
   --bs-btn-hover-border-color: rgba(0, 0, 0, .15);
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: #2888a9;
+  --bs-btn-active-bg: #1c5f75;
   --bs-btn-active-border-color: rgba(0, 0, 0, .15);
   color: #fff;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
-  background-image: linear-gradient(rgba(78, 178, 213, 0), rgba(7, 23, 29, .1));
+  background-image: linear-gradient(rgba(54, 124, 148, 0), rgba(7, 23, 29, .1));
 }
 .btn-primary, .btn-success, .btn-warning, .btn-danger, .btn-info {
   color: var(--bs-btn-color);
@@ -1882,7 +1882,7 @@ hr {
 :root {
   --admin-header-height: 58px;
   --admin-footer-clearance: 48px;
-  --admin-blue: #428bca;
+  --admin-blue: #3a7ab2;
   --admin-blue-dark: #3276b1;
   --admin-border: #d6d6d6;
   --admin-paper: #f9f6f1;
@@ -2122,14 +2122,14 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   justify-content: center;
   gap: 7px;
   padding: 0 12px;
-  color: #b2afaa;
+  color: #777572;
   font-size: 12px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .subnavbar .container > .mainnav > li > a:hover {
-  color: #888;
+  color: #666;
   background: transparent;
 }
 
@@ -2401,7 +2401,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
 
 .form-text {
   margin-top: 5px;
-  color: #777;
+  color: #6f6f6f;
   line-height: 1.45;
 }
 

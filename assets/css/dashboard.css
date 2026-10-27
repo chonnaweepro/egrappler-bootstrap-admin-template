@@ -76,7 +76,7 @@ Bootstrap Admin Template by EGrappler.com
 	
 	font-size: 11px;
 	font-weight: bold;
-	color: #999;
+	color: #747474;
 }
 
 .stat-value {
@@ -153,13 +153,13 @@ Bootstrap Admin Template by EGrappler.com
 	margin-bottom: .25em;
 	
 	font-size: 24px;
-	color: #888;
+	color: #757575;
 }
 
 .news-item-preview {
 	margin-bottom: 0;
 	
-	color: #777;
+	color: #6f6f6f;
 }
 
 .news-item-month {
@@ -168,7 +168,7 @@ Bootstrap Admin Template by EGrappler.com
 	
 	font-size: 12px;
 	font-weight: 600;
-	color: #888;
+	color: #757575;
 }
 
 
@@ -525,7 +525,7 @@ margin-bottom: 26px;}
 	width: 50px;
 	height: 27px;
 	padding: 0;
-	color: #999;
+	color: #757575;
 	line-height: 22.1px;
 	background: transparent;
 	border: 0;
@@ -547,16 +547,25 @@ margin-bottom: 26px;}
 
 #calendar > div:first-child > div:nth-child(3) .btn.active {
 	color: #fff;
-	background: #777;
-	border-color: #777;
+	background: #6e6e6e;
+	border-color: #6e6e6e;
 }
 
 #calendar .legacy-dashboard-event {
 	margin: 0 3px 1px;
 	color: #fff;
-	background-color: #5e96ea;
+	background-color: #4a76b9;
 	border: 0;
 	border-radius: 0;
+}
+
+#calendar .legacy-dashboard-event,
+#calendar .legacy-dashboard-event * {
+	color: #fff !important;
+}
+
+#calendar .text-body-tertiary {
+	color: #6b6e71 !important;
 }
 
 #calendar .legacy-dashboard-event * {

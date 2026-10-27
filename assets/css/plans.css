@@ -49,7 +49,7 @@ Bootstrap Admin Template by EGrappler.com
     font-size: 66px;
     line-height: 0.8em;
     
-	background-color: #797979;
+	background-color: #6f6f6f;
 	
     border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
@@ -282,11 +282,11 @@ Bootstrap Admin Template by EGrappler.com
 
 
 .plan.green .plan-header {
-	background-color: #00ba8b ;
+	background-color: #008664 ;
 }
 
 .plan.green .plan-price {
-	background-color: #00ba8b ;
+	background-color: #008664 ;
 }
 
 

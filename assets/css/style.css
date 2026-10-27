@@ -25,8 +25,6 @@ textarea {
 }
 
 .dropdown .dropdown-menu {
-	-webkit-border-radius: 6px;
-	-moz-border-radius: 6px;
 	border-radius: 6px;
 }
 
@@ -34,9 +32,6 @@ textarea {
 	margin-right: 12px;
 	display: inline-block; }
  .image img {
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
 	border-radius: 50%;
 	vertical-align: bottom !important; }
 
@@ -181,8 +176,6 @@ textarea {
 	
 	background: #428bca !important;
 	
-	-moz-border-radius: 0;
-	-webkit-border-radius: 0;
 	border-radius: 0;
 }
 
@@ -191,7 +184,7 @@ textarea {
 }
 
 .navbar .nav a {
-	font-size: 11px;
+	font-size: 12px;
 }
 .navbar .nav>li>a { color:#fff !important;}
 .navbar .brand {
@@ -292,10 +285,6 @@ textarea {
 .subnavbar .dropdown .dropdown-menu {
     	text-align: left;
     	
-		-webkit-border-top-left-radius: 0;
-		-webkit-border-top-right-radius: 0;
-		-moz-border-radius-topleft: 0;
-		-moz-border-radius-topright: 0;
 		border-top-left-radius: 0;
 		border-top-right-radius: 0;
     }
@@ -354,7 +343,7 @@ textarea {
 .extra-inner {
 	padding: 20px 0;
 	
-	font-size: 11px;
+	font-size: 12px;
 	color: #BBB;
 	
 	background: #1A1A1A;
@@ -436,20 +425,13 @@ textarea {
 	line-height: 40px;
 	
 	background: #f9f6f1;
-	background:-moz-linear-gradient(top, #f9f6f1 0%, #f2efea 100%); /* FF3.6+ */
-	background:-webkit-gradient(linear, left top, left bottom, color-stop(0%,#f9f6f1), color-stop(100%,#f2efea)); /* Chrome,Safari4+ */
-	background:-webkit-linear-gradient(top, #f9f6f1 0%,#f2efea 100%); /* Chrome10+,Safari5.1+ */
-	background:-o-linear-gradient(top, #f9f6f1 0%,#f2efea 100%); /* Opera11.10+ */
-	background:-ms-linear-gradient(top, #f9f6f1 0%,#f2efea 100%); /* IE10+ */
-	background:linear-gradient(top, #f9f6f1 0%,#f2efea 100%); /* W3C */
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f6f1', endColorstr='#f2efea');
-	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f6f1', endColorstr='#f2efea')";
+	background: linear-gradient(to bottom, #f9f6f1 0%, #f2efea 100%);
 	
 	
 	border: 1px solid #d6d6d6;
 	
 	
-	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
 }	
 	
 	.widget-header h3 {
@@ -494,18 +476,12 @@ textarea {
 	
 	border: 1px solid #D5D5D5;
 	
-	-moz-border-radius: 5px;
-	-webkit-border-radius: 5px;
 	border-radius: 5px;
 }
 
 .widget-header+.widget-content {
 	border-top: none;
 	
-	-webkit-border-top-left-radius: 0;
-	-webkit-border-top-right-radius: 0;
-	-moz-border-radius-topleft: 0;
-	-moz-border-radius-topright: 0;
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
 }
@@ -523,11 +499,6 @@ textarea {
 
 .widget-content:after {
     clear:both;
-}
-
-/* For IE 6/7 (trigger hasLayout) */
-.widget-content {
-    zoom:1;
 }
 
 /* Widget Table */
@@ -659,13 +630,9 @@ ul.messages_layout li a.avatar {
 	top: 0
 }
 ul.messages_layout li a.avatar img {
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
 	border-radius: 5px
 }
 ul.messages_layout li .message_wrap {
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
 	border-radius: 3px;
 	position: relative;
 	border: 1px solid #e9e9e9;
@@ -674,8 +641,6 @@ ul.messages_layout li .message_wrap {
 	margin-bottom: 20px;
 	float: left;
 	background: #fefefe;
-	-webkit-box-shadow: rgba(0,0,0,0.1) 0 1px 0px;
-	-moz-box-shadow: rgba(0,0,0,0.1) 0 1px 0px;
 	box-shadow: rgba(0,0,0,0.1) 0 1px 0px
 }
 ul.messages_layout li .message_wrap .arrow {
@@ -701,7 +666,7 @@ ul.messages_layout li .message_wrap .info .name {
 }
 ul.messages_layout li .message_wrap .info .time {
 	float: left;
-	font-size: 11px;
+	font-size: 12px;
 	margin-left: 6px
 }
 ul.messages_layout li .message_wrap .text {
@@ -711,7 +676,7 @@ ul.messages_layout li .message_wrap .text {
 	padding-top: 5px
 }
 
-ul.messages_layout .dropdown-menu  li{ width:100%; font-size:11px;}
+ul.messages_layout .dropdown-menu  li{ width:100%; font-size:12px;}
 
 
 /* Full Calendar */
@@ -1097,7 +1062,6 @@ table.fc-border-separate {
 }
 .fc-agenda-allday .fc-day-content {
 	min-height: 34px;
-	_height: 34px
 }
 .fc-agenda-divider-inner {
 	height: 2px;
@@ -1286,7 +1250,7 @@ color: #333;
     
     
     .subnavbar .container > ul > li.active > a {
-		font-size: 11px;
+		font-size: 12px;
     	background: transparent;
     }
 	
@@ -1421,7 +1385,7 @@ color: #333;
   display: block;
   padding: 10px 10px 11px;
   color: #fff !important;
-  font-size: 11px;
+  font-size: 12px;
   line-height: 19px;
   text-decoration: none;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, .25);
@@ -1462,7 +1426,7 @@ color: #333;
   border-radius: 14px;
   background: #008866;
   color: #fff;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: bold;
   line-height: normal;
   box-shadow: none;
@@ -1661,7 +1625,7 @@ h3 { font-size: 18px; line-height: 27px; }
 h4, h5, h6 { line-height: 18px; }
 h4 { font-size: 14px; }
 h5 { font-size: 12px; }
-h6 { color: #747474; font-size: 11px; text-transform: uppercase; }
+h6 { color: #747474; font-size: 12px; text-transform: uppercase; }
 h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
   color: #747474;
   font-weight: normal;
@@ -2326,7 +2290,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   .footer-inner {
     min-height: 40px;
     padding: 7px 10px;
-    font-size: 11px;
+    font-size: 12px;
     line-height: 1.3;
   }
 
@@ -2351,11 +2315,13 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   .footer-inner {
     min-height: 36px;
     padding: 6px 8px;
-    font-size: 10px;
+    font-size: 12px;
   }
 }
 
-@media (max-width: 575.98px) {
+/* Below the desktop breakpoint the account control is a 40px icon button, so the
+   label stays available to assistive tech only (it used to overflow onto the toggler). */
+@media (max-width: 991.98px) {
   .navbar-account-label {
     position: absolute;
     width: 1px;

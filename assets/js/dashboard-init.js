@@ -103,6 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dayCellClass: "legacy-dashboard-day",
     dayCellInnerClass: "legacy-dashboard-day-inner",
     dayCellTopInnerClass: "legacy-dashboard-day-number",
+    dayHeaderInnerClass: "legacy-dashboard-day-header",
     headerToolbar: {
       left: "prev,next today",
       center: "title",

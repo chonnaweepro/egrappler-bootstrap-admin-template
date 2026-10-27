@@ -342,6 +342,14 @@ Typography rules:
 - ปุ่ม prev/next ของ calendar ใช้ glyph เดียว (legacy `◄ ►`) ซ่อน chevron ของ theme
 - Widget สองคอลัมน์ของ dashboard เป็น masonry ตาม design เดิม ความสูงด้านล่างไม่ต้องเท่ากัน
 
+## 12.5 CSS Hygiene Standard
+
+- ห้ามเขียน vendor prefix ซ้ำกับค่ามาตรฐาน (`-webkit-border-radius`, `-moz-box-shadow`, `filter: progid`, `zoom:1`, `_height`) ยกเว้น `-webkit-font-smoothing` / `-moz-osx-font-smoothing`
+- gradient ใช้ `linear-gradient(to bottom, …)`: รูปแบบ `linear-gradient(top, …)` ไม่ถูกต้องและเบราว์เซอร์ทิ้งทั้ง declaration
+- ข้อความที่ผู้ใช้ต้องอ่านทุกจุดต้อง `>= 12px` ทั้ง CSS ของโปรเจกต์และของ widget ภายนอก (เช่น calendar ที่ vendor ลดเหลือ 11px ใน container แคบ)
+- ปุ่ม account ที่ `<=991.98px` เป็นไอคอน 40px: label ต้องเป็น assistive-only (`.navbar-account-label`) ห้ามล้นไปทับ hamburger
+- ก่อนแก้ CSS แบบ "ไม่ควรเปลี่ยนหน้าตา" ให้ถ่ายภาพทุกหน้า × 6 viewport เป็น baseline แล้วเทียบ pixel หลังแก้: ผลที่ต้องได้คือ 0 พิกเซลต่าง
+
 ## Current Project Tokens
 
 ```css

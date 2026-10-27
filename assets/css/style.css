@@ -2292,3 +2292,17 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
     transition: none;
   }
 }
+
+/* Icon-only action buttons: symmetric padding so the glyph sits on the centre line,
+   no 1px text-shadow ghost on the strokes, and a size where Font Awesome strokes stay crisp. */
+.action-table .td-actions .btn {
+  padding: 4px 5px;
+  text-shadow: none;
+}
+
+.action-table .td-actions .btn > i {
+  font-size: 12px;
+  line-height: 22px;
+  /* Own compositing layer -> grayscale antialiasing, no ClearType colour fringes on white glyphs. */
+  will-change: transform;
+}

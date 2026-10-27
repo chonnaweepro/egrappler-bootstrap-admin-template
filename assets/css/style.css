@@ -1092,18 +1092,18 @@ hr {
   background-image: linear-gradient(rgba(24, 123, 172, 0), rgba(1, 9, 13, .1));
 }
 .btn-success {
-  --bs-btn-color: #1a1a1a;
+  --bs-btn-color: #fff;
   --bs-btn-bg: var(--color-success-fill);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
-  --bs-btn-hover-color: #1a1a1a;
-  --bs-btn-hover-bg: #4cae4c;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #24742a;
   --bs-btn-hover-border-color: rgba(0, 0, 0, .15);
-  --bs-btn-active-color: #1a1a1a;
-  --bs-btn-active-bg: #4aa84a;
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #1d5c22;
   --bs-btn-active-border-color: rgba(0, 0, 0, .15);
-  color: #1a1a1a;
-  text-shadow: none;
-  background-image: linear-gradient(rgba(92, 184, 92, 0), rgba(5, 18, 5, .1));
+  color: #fff;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, .15);
+  background-image: linear-gradient(rgba(42, 133, 48, 0), rgba(0, 0, 0, .1));
 }
 .btn-warning {
   --bs-btn-color: #1a1a1a;
@@ -1263,7 +1263,7 @@ hr {
   --color-active: #ff7f74;
 
   --color-success: #3f7d3f;
-  --color-success-fill: #5cb85c;
+  --color-success-fill: #2a8530;
   --color-success-soft: #dff0d8;
   --color-warning: #95661e;
   --color-warning-fill: #f5a732;

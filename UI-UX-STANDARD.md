@@ -243,7 +243,7 @@
 |---|---|---|---|---|
 | Primary (brand / header) | `--color-primary` `#3A7AB2` | `--color-primary-strong` `#3276B1` / deep `#245580` | – | ขาว 4.56 |
 | Action (ปุ่ม primary) | `--color-action` `#187BAC` | `#187BAC` (4.7) | – | ขาว 4.70 |
-| Success | `--color-success-fill` `#5CB85C` | `--color-success` `#3F7D3F` (4.62) | `--color-success-soft` `#DFF0D8` | **เข้ม** `#1A1A1A` 7.0 |
+| Success | `--color-success-fill` `#2A8530` | `--color-success` `#3F7D3F` (4.62) | `--color-success-soft` `#DFF0D8` | ขาว 4.8 |
 | Warning | `--color-warning-fill` `#F5A732` | `--color-warning` `#95661E` (4.64) | `--color-warning-soft` `#FCF8E3` | **เข้ม** `#1A1A1A` |
 | Danger | `--color-danger-fill` `#DB3325` | `--color-danger` `#D23124` (4.63) | `--color-danger-soft` `#F2DEDE` | ขาว |
 | Info | `--color-info-fill` `#367C94` | `--color-info` `#34778E` (4.67) | `--color-info-soft` `#D9EDF7` | ขาว |
@@ -379,7 +379,6 @@ Typography rules:
 - ตัวทดสอบต้อง assert ว่า modal/เมนูเปิดจริงก่อนวัดผล: การวัดบน element ที่ไม่มีอยู่คืนค่า object ของ error ซึ่งถูกนับเป็น truthy ทำให้ผ่านโดยไม่ได้ทดสอบอะไร
 - Brand text ที่ `>=768px` ยืดเข้าจากขอบ content 6–8px ตาม padding เดิมของ TemplateVamp (ตั้งใจคงไว้); ที่ `<=767.98px` อยู่ขอบ gutter 12px เดียวกับ content
 
-- **Success (ปุ่ม):** `#5cb85c` + ตัวอักษร `#1a1a1a` (7.0:1; hover `#4cae4c`, active `#4aa84a`). เขียวที่สว่างกว่าโทนมะกอกเดิม `#597e10` ใช้กับตัวอักษรขาวไม่ผ่าน 4.5:1 (ความสว่างสูงสุดที่ยังผ่านคือ L≈0.178 ซึ่งโทนเดิมอยู่ใกล้เพดานแล้ว) จึงสลับเป็นตัวอักษรเข้มเหมือน Warning. `--color-success-bright` สำหรับพื้นหลังเท่านั้น; `--color-success` (`#3f8f4a`) ยังเป็นสีสำหรับตัวอักษร/ไอคอนบนพื้นสว่าง
 
 ## 12.8 Menu Standard
 

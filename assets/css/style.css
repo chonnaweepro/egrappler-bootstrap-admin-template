@@ -2180,3 +2180,101 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
 .dropdown-menu .dropdown-item:focus-visible {
   outline-offset: -3px;
 }
+
+/* ---------------------------------------------------------------------
+   Menu refinements (structure unchanged: horizontal desktop bar, vertical
+   collapse below 992px).
+   --------------------------------------------------------------------- */
+
+/* Expandable items show a caret that flips when the submenu is open. */
+.subnavbar .container > .mainnav > li > a.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin: 0 0 0 7px;
+  vertical-align: middle;
+  border-top: 5px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  transition: transform .15s ease;
+}
+
+.subnavbar .container > .mainnav > li > a.dropdown-toggle[aria-expanded="true"]::after {
+  transform: rotate(180deg);
+}
+
+/* Desktop dropdown: roomier rows and a visible "you are here" item. */
+.subnavbar .dropdown-menu {
+  min-width: 200px;
+  padding: 6px 0;
+}
+
+.subnavbar .dropdown-item {
+  padding: 6px 20px;
+  line-height: 20px;
+}
+
+.subnavbar .dropdown-item[aria-current="page"] {
+  color: #383838;
+  font-weight: 700;
+  background: #f5f5f5;
+  box-shadow: inset 3px 0 0 #ff7f74;
+}
+
+.subnavbar .dropdown-item[aria-current="page"]:hover,
+.subnavbar .dropdown-item[aria-current="page"]:focus {
+  color: #fff;
+  background: var(--admin-blue);
+}
+
+/* Handheld panel: submenu rows are real touch targets and line up with the
+   labels of the main items. */
+@media (max-width: 991.98px) {
+  :root {
+    --menu-text-x: 55px;
+  }
+
+  .subnavbar .container > .mainnav > li > a.dropdown-toggle::after {
+    margin-left: auto;
+  }
+
+  .subnavbar .container > .mainnav .dropdown-menu::before,
+  .subnavbar .container > .mainnav .dropdown-menu::after {
+    display: none;
+  }
+
+  .subnavbar .container > .mainnav .dropdown-menu {
+    /* Popper still writes a translate for this in-flow menu; cancel it. */
+    inset: auto !important;
+    transform: none !important;
+    min-width: 0;
+    padding: 0 0 6px;
+    background: #f9f6f1;
+  }
+
+  .subnavbar .container > .mainnav .dropdown-item {
+    display: flex;
+    min-height: 44px;
+    align-items: center;
+    padding: 8px 12px 8px var(--menu-text-x);
+    font-size: 13px;
+    border-top: 1px solid #ece8e1;
+  }
+
+  .subnavbar .container > .mainnav .dropdown-item:first-child,
+  .subnavbar .container > .mainnav li:first-child > .dropdown-item {
+    border-top: 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  :root {
+    --menu-text-x: 45px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .subnavbar .container > .mainnav > li > a.dropdown-toggle::after {
+    transition: none;
+  }
+}

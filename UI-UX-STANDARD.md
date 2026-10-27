@@ -375,6 +375,14 @@ Typography rules:
 - ตัวทดสอบต้อง assert ว่า modal/เมนูเปิดจริงก่อนวัดผล: การวัดบน element ที่ไม่มีอยู่คืนค่า object ของ error ซึ่งถูกนับเป็น truthy ทำให้ผ่านโดยไม่ได้ทดสอบอะไร
 - Brand text ที่ `>=768px` ยืดเข้าจากขอบ content 6–8px ตาม padding เดิมของ TemplateVamp (ตั้งใจคงไว้); ที่ `<=767.98px` อยู่ขอบ gutter 12px เดียวกับ content
 
+## 12.8 Menu Standard
+
+- โครงเดิม: desktop เป็นแถบแนวนอน, `<992px` พับเป็นแนวตั้งใน panel, ไม่มี search
+- หน้าปัจจุบันระบุด้วย `aria-current="page"` (ไม่ใช่เฉพาะสี): ทั้งรายการหลักและรายการใน dropdown; รายการใน dropdown ที่เป็นหน้าปัจจุบันมีแถบ `#ff7f74` ด้านซ้ายและตัวหนา
+- รายการที่ขยายได้มีลูกศร (`::after`) หมุน 180° เมื่อ `aria-expanded="true"`; ปิด transition เมื่อ reduced-motion
+- Handheld: submenu สูงขั้นต่ำ `44px` และข้อความเริ่มที่ x เดียวกับ label ของเมนูหลัก (`--menu-text-x`: 55px / 45px ที่ <768px)
+- Dropdown ใน panel ที่เป็น `position: static` ต้อง reset `inset`/`transform` เพราะ Popper ยังเขียน `translate` ให้ ซึ่งทำให้ submenu เลื่อนไปทับแถวแม่
+
 ## Current Project Tokens
 
 ```css

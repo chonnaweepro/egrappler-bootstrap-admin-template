@@ -237,28 +237,32 @@
 
 ใช้ semantic tokens จาก `assets/css/style.css` แทนการกระจายค่า hex ใหม่ใน component โดยยังคง TemplateVamp visual identity เดิมไว้:
 
-| Role | Token | Value | ใช้กับ |
-|---|---|---|---|
-| Primary | `--color-primary` | `#428BCA` | brand accent, link, legacy highlight |
-| Primary strong | `--color-primary-strong` | `#3276B1` | header/button ที่มี white text |
-| Primary deep | `--color-primary-deep` | `#245580` | hover/focus ที่ต้องการ contrast สูง |
-| Accent | `--color-accent` | `#19BC9C` | secondary highlight และ metric accent |
-| Success | `--color-success` | `#3F8F4A` | success state ที่มีข้อความร่วมด้วย |
-| Warning | `--color-warning` | `#B06D00` | warning state ที่มีข้อความร่วมด้วย |
-| Danger | `--color-danger` | `#B52B27` | error/destructive state |
-| Info | `--color-info` | `#31708F` | informational state |
-| Background | `--color-background` | `#F9F6F1` | page background เดิม |
-| Surface | `--color-surface` | `#FFFFFF` | card, form, modal surface |
-| Muted surface | `--color-surface-muted` | `#F5F5F5` | table/header/control background |
-| Border | `--color-border` | `#D6D6D6` | default border |
-| Strong border | `--color-border-strong` | `#B8B8B8` | active/hover separation |
-| Text | `--color-text` | `#333333` | primary text |
-| Muted text | `--color-text-muted` | `#666666` | secondary text |
-| Focus | `--color-focus` | `rgba(66,139,202,.28)` | focus ring/background |
+โครงสร้าง: ทุกสถานะมี 3 ค่า — **fill** (พื้นปุ่ม/chip), **text** (ตัวอักษร/ไอคอนบนพื้นสว่าง ผ่าน 4.5:1 บน `#F9F6F1` และ `#FFF`), **soft** (พื้น alert). ปุ่มและ alert อ่านค่าจาก token เหล่านี้ เปลี่ยนสีที่เดียวใน `:root`
+
+| Role | Fill | Text (on light) | Soft | ตัวอักษรบน fill |
+|---|---|---|---|---|
+| Primary (brand / header) | `--color-primary` `#3A7AB2` | `--color-primary-strong` `#3276B1` / deep `#245580` | – | ขาว 4.56 |
+| Action (ปุ่ม primary) | `--color-action` `#187BAC` | `#187BAC` (4.7) | – | ขาว 4.70 |
+| Success | `--color-success-fill` `#5CB85C` | `--color-success` `#3F7D3F` (4.62) | `--color-success-soft` `#DFF0D8` | **เข้ม** `#1A1A1A` 7.0 |
+| Warning | `--color-warning-fill` `#F5A732` | `--color-warning` `#95661E` (4.64) | `--color-warning-soft` `#FCF8E3` | **เข้ม** `#1A1A1A` |
+| Danger | `--color-danger-fill` `#DB3325` | `--color-danger` `#D23124` (4.63) | `--color-danger-soft` `#F2DEDE` | ขาว |
+| Info | `--color-info-fill` `#367C94` | `--color-info` `#34778E` (4.67) | `--color-info-soft` `#D9EDF7` | ขาว |
+| Accent | `--color-accent` `#19BC9C` | `#12856F` | – | – |
+| Active marker | `--color-active` `#FF7F74` | – | – | ใช้เป็นเส้น/แถบเท่านั้น ไม่ใช่ตัวอักษร |
+
+| Neutral | Token | Value |
+|---|---|---|
+| Background | `--color-background` | `#F9F6F1` |
+| Surface / Muted surface | `--color-surface` / `--color-surface-muted` | `#FFFFFF` / `#F5F5F5` |
+| Border / Strong | `--color-border` / `--color-border-strong` | `#D6D6D6` / `#B8B8B8` |
+| Text / Muted / Subtle | `--color-text` / `-muted` / `-subtle` | `#333333` / `#666666` / `#6F6F6F` (4.8) |
+| Focus | `--color-focus`, `--focus-ring` | `rgba(58,122,178,.28)`, `#245580` |
+
+หมายเหตุ: ค่า `text` ของ success/warning เคยถูกบันทึกเป็น `#3F8F4A` (3.72:1) และ `#B06D00` (3.87:1) ซึ่งไม่ผ่าน 4.5:1; ได้แก้เป็นค่าข้างบนที่คำนวณจากสี fill โดยทำให้เข้มลงจนผ่าน 4.6 บน `#F9F6F1`. ต้องคำนวณ ratio ก่อนบันทึก token ว่า "ปลอดภัยสำหรับข้อความ" ทุกครั้ง
 
 Accessibility rule:
 
-- `#428BCA` เป็น brand color เดิม แต่ไม่ควรใช้เป็นพื้นหลังที่มี white text ใน component ใหม่ เพราะ contrast ไม่ถึงเป้าหมาย `4.5:1`
+- `#428BCA` (brand เดิมของ template) ไม่ใช้เป็นพื้นหลังที่มี white text (3.63:1); ใช้ `--color-primary` `#3A7AB2` หรือ strong/deep แทน
 - หากพื้นหลังมี white text ให้ใช้ `--color-primary-strong` หรือ `--color-primary-deep`
 - สี success/warning/danger ต้องมี text, icon หรือ pattern ประกอบ ไม่ใช้สีอย่างเดียว
 - สถานะบน chart ต้องไม่พึ่งพาสีเพียงอย่างเดียว

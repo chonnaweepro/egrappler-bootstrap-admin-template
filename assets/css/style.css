@@ -246,7 +246,7 @@ textarea {
 
 .subnavbar .container > ul > li.active > a {
 	
-	border-bottom:3px solid #ff7f74;
+	border-bottom:3px solid var(--color-active);
 	color: #383838;
 }
 
@@ -843,7 +843,7 @@ color: #333;
 .dropdown-menu .dropdown-item:focus,
 .dropdown-menu .dropdown-item.active {
   color: #fff;
-  background-color: #428bca;
+  background-color: var(--color-primary-strong);
 }
 
 .input-group .form-control { min-width: 0; }
@@ -858,17 +858,17 @@ color: #333;
 }
 .alert-success {
   color: #3d763e;
-  background-color: #dff0d8;
+  background-color: var(--color-success-soft);
   border-color: #d6e9c6;
 }
 .alert-info {
   color: #306f8e;
-  background-color: #d9edf7;
+  background-color: var(--color-info-soft);
   border-color: #bce8f1;
 }
 .alert-danger {
   color: #a84342;
-  background-color: #f2dede;
+  background-color: var(--color-danger-soft);
   border-color: #eed3d7;
 }
 
@@ -1078,7 +1078,7 @@ hr {
 }
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #187bac;
+  --bs-btn-bg: var(--color-action);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #0e70a1;
@@ -1093,7 +1093,7 @@ hr {
 }
 .btn-success {
   --bs-btn-color: #1a1a1a;
-  --bs-btn-bg: #5cb85c;
+  --bs-btn-bg: var(--color-success-fill);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #1a1a1a;
   --bs-btn-hover-bg: #4cae4c;
@@ -1107,7 +1107,7 @@ hr {
 }
 .btn-warning {
   --bs-btn-color: #1a1a1a;
-  --bs-btn-bg: #f5a732;
+  --bs-btn-bg: var(--color-warning-fill);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #1a1a1a;
   --bs-btn-hover-bg: #f49a15;
@@ -1121,7 +1121,7 @@ hr {
 }
 .btn-danger {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #db3325;
+  --bs-btn-bg: var(--color-danger-fill);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #bd2b1f;
@@ -1135,7 +1135,7 @@ hr {
 }
 .btn-info {
   --bs-btn-color: #fff;
-  --bs-btn-bg: #367c94;
+  --bs-btn-bg: var(--color-info-fill);
   --bs-btn-border-color: rgba(0, 0, 0, .1);
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #257490;
@@ -1252,15 +1252,29 @@ hr {
 
   /* TemplateVamp semantic palette. Keep legacy colors, but use semantic
      tokens for new components so contrast and state meaning stay consistent. */
-  --color-primary: #428bca;
+  /* Palette: every role has a fill (button/chip background), a text colour that
+     passes 4.5:1 on the page background (#f9f6f1) and on white, and a soft tint
+     for alerts. Buttons and alerts read these tokens, so change colours here. */
+  --color-primary: #3a7ab2;
   --color-primary-strong: #3276b1;
   --color-primary-deep: #245580;
+  --color-action: #187bac;
   --color-accent: #19bc9c;
-  --color-success: #3f8f4a;
-  --color-success-bright: #5cb85c;
-  --color-warning: #b06d00;
-  --color-danger: #b52b27;
-  --color-info: #31708f;
+  --color-active: #ff7f74;
+
+  --color-success: #3f7d3f;
+  --color-success-fill: #5cb85c;
+  --color-success-soft: #dff0d8;
+  --color-warning: #95661e;
+  --color-warning-fill: #f5a732;
+  --color-warning-soft: #fcf8e3;
+  --color-danger: #d23124;
+  --color-danger-fill: #db3325;
+  --color-danger-soft: #f2dede;
+  --color-info: #34778e;
+  --color-info-fill: #367c94;
+  --color-info-soft: #d9edf7;
+
   --color-surface: #ffffff;
   --color-surface-muted: #f5f5f5;
   --color-background: #f9f6f1;
@@ -1268,8 +1282,8 @@ hr {
   --color-border-strong: #b8b8b8;
   --color-text: #333333;
   --color-text-muted: #666666;
-  --color-text-subtle: #777777;
-  --color-focus: rgba(66, 139, 202, .28);
+  --color-text-subtle: #6f6f6f;
+  --color-focus: rgba(58, 122, 178, .28);
   --focus-ring: #245580;
   --focus-ring-inverse: #ffffff;
 
@@ -1500,7 +1514,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
 
 .subnavbar .container > .mainnav > li.active > a {
   color: #383838;
-  border-bottom: 3px solid #ff7f74;
+  border-bottom: 3px solid var(--color-active);
 }
 
 .subnavbar .container > .mainnav > li > a > i {
@@ -1667,7 +1681,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   .subnavbar .container > .mainnav > li.active > a {
     color: #383838;
     background: #f5f5f5;
-    border-left-color: #ff7f74;
+    border-left-color: var(--color-active);
   }
 
   .subnavbar .container > .mainnav .dropdown-menu {
@@ -1762,7 +1776,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
 
 .form-control:focus,
 .form-select:focus {
-  border-color: #428bca;
+  border-color: var(--color-primary);
   box-shadow: 0 0 0 3px var(--ui-control-focus);
 }
 
@@ -2218,7 +2232,7 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   color: #383838;
   font-weight: 700;
   background: #f5f5f5;
-  box-shadow: inset 3px 0 0 #ff7f74;
+  box-shadow: inset 3px 0 0 var(--color-active);
 }
 
 .subnavbar .dropdown-item[aria-current="page"]:hover,

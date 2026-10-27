@@ -350,6 +350,12 @@ Typography rules:
 - ปุ่ม account ที่ `<=991.98px` เป็นไอคอน 40px: label ต้องเป็น assistive-only (`.navbar-account-label`) ห้ามล้นไปทับ hamburger
 - ก่อนแก้ CSS แบบ "ไม่ควรเปลี่ยนหน้าตา" ให้ถ่ายภาพทุกหน้า × 6 viewport เป็น baseline แล้วเทียบ pixel หลังแก้: ผลที่ต้องได้คือ 0 พิกเซลต่าง
 
+### Dead CSS policy
+
+- ลบเฉพาะ rule ที่ตายแน่นอน: CSS ของ library ที่ถูกแทนที่แล้ว (FullCalendar v1 / jQuery-UI), ส่วนของ component ที่ถูกถอดตาม scope (search bar) และ class ของ Bootstrap 2 ที่ไม่มีใน Bootstrap 5
+- **ห้ามลบ variant ที่ template เตรียมไว้ให้ใช้** แม้ไม่มีหน้าใดเรียก เช่น สี `.plan.*`, `.login-social`, `.table-*` variants, `.stats`: ถือเป็น API ของ template
+- ก่อนลบต้องวัดว่า selector ไม่ match ทั้ง 11 หน้า แล้วเทียบภาพ 66 ภาพ + state ที่เปลี่ยนได้ (ปฏิทิน 3 view, dropdown, modal, เมนูมือถือ) ต้อง 0 พิกเซลต่าง
+
 ## Current Project Tokens
 
 ```css

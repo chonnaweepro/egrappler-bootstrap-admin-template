@@ -388,6 +388,11 @@ Typography rules:
 - Handheld: submenu สูงขั้นต่ำ `44px` และข้อความเริ่มที่ x เดียวกับ label ของเมนูหลัก (`--menu-text-x`: 55px / 45px ที่ <768px)
 - Dropdown ใน panel ที่เป็น `position: static` ต้อง reset `inset`/`transform` เพราะ Popper ยังเขียน `translate` ให้ ซึ่งทำให้ submenu เลื่อนไปทับแถวแม่
 
+## 12.9 Footer on Phones
+
+- `<=767.98px`: แถบ footer แบบ fixed (`.footer`, ข้อความ copyright) ถูกซ่อน และ `--admin-footer-clearance` เป็น `0px` เพื่อคืนพื้นที่ (body padding-bottom และ max-height ของเมนูที่เปิด อ่านค่านี้เหมือนกัน)
+- `>=768px` ยังแสดง footer ตามเดิม; บล็อกลิงก์ `.extra` ท้ายหน้าไม่ได้รับผลกระทบ
+
 ## Current Project Tokens
 
 ```css

@@ -2306,3 +2306,15 @@ body.has-subnavbar .admin-navbar .navbar-account > a > .fa-user-large {
   /* Own compositing layer -> grayscale antialiasing, no ClearType colour fringes on white glyphs. */
   will-change: transform;
 }
+
+/* Phones: hide the fixed footer and release the space it reserved
+   (body bottom padding and the opened menu's max-height both read this token). */
+@media (max-width: 767.98px) {
+  :root {
+    --admin-footer-clearance: 0px;
+  }
+
+  .footer {
+    display: none;
+  }
+}
